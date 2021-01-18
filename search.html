@@ -1,0 +1,31 @@
+---
+layout: search
+permalink: /search/
+---
+
+
+
+<div class="field">
+    <div class="control">
+      <input class="input is-large" type="text" placeholder="Search.." id="search-input">
+    </div>
+</div>
+
+<div class="content is-medium">
+    <ul id="results-container">
+        <br>
+    </ul>
+</div>
+    
+    
+<!-- Configuration -->
+<script src="/assets/js/search-script.js" type="text/javascript"></script>
+
+<script>
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate:'<li style="list-style-type: none;"><a href="{{ site.url }}{url}" class="title" >{title}</a><br>{subtitle}</li><hr>'
+})
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+    {% include head.html %}
+
+    <body>
+
+        {% include navbar.html %}
+
+        <section class="section" style="font-size: larger; line-height: 30px;">
+            <div class="container">
+                <div class="columns">
+                    <div class="column"></div>
+
+                    <div class="column is-two-thirds">
+
+                        {% if page.main_image_src %}
+                        <div class="box">
+                            <figure class="image is-text-centered">
+                                <img src="{{ page.main_image_src }}">
+                                <figcaption><small>{{ page.main_image_caption }}</small></figcaption>
+                            </figure>
+                        </div>
+                        {% endif %}
+                        
+                        {{ content }}
+
+                    </div>
+
+                    <div class="column"></div>
+                </div>
+            </div>
+        </section>
+
+        {% include scripts.html %}
+
+        {% include google-analytics.html %}
+
+    </body>
+
+</html>
+
+

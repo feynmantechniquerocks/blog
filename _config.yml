@@ -1,0 +1,17 @@
+title: Feynman Technique Rocks
+email: feynmantechniquerocks@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  The blog where I teach the things I'm learning.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+google_analytics: G-5KNRGJDPZM
+twitter_username: feynmantechniquerocks
+github_username:  feynmantechniquerocks
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+

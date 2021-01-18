@@ -1,0 +1,44 @@
+<!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                {% if site.email %}
+                <a href="mailto:{{ site.email }}" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                {% endif %} {% if site.twitter_username %}
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                {% endif %} {% if site.github_username %}
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                {% endif %} {% if site.facebook_username %}
+                <a href="https://facebook.com/{{ site.facebook_username }}" class="button is-medium is-facebook" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </span>
+                </a>
+                {% endif %} {% if site.instagram_username %}
+                <a href="https://instagram.com/{{ site.instagram_username }}" class="button is-medium is-instagram" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </span>
+                </a>
+                {% endif %}
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>

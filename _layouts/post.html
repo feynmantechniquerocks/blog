@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+<!-- style="font-size: larger; line-height: 30px; font-family: 'Roboto', sans-serif;" -->
+
+<section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">{{ page.title }}</h1>
+
+            {% if page.main_image_src %}
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="{{ page.main_image_src }}">
+                        <figcaption><small>{{ page.main_image_caption }}</small></figcaption>
+                    </figure>
+                </div>
+                {% endif %}
+
+                {{ content }}
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                {% if page.previous.url %}
+                <a class="pagination-previous" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                {% endif %}
+                {% if page.next.url %}
+                <a class="pagination-next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                {% endif %}
+
+                </nav>
+
+                <br>
+
+                {% assign maxRelated = 4 %}
+                {% assign minCommonTags =  1 %}
+                {% assign maxRelatedCounter = 0 %}
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    {% for post in site.posts %}
+
+                        {% assign sameTagCount = 0 %}
+                        {% assign commonTags = '' %}
+
+                        {% for category in post.categories %}
+                            {% if post.url != page.url %}
+                                {% if page.categories contains category %}
+                                    {% assign sameTagCount = sameTagCount | plus: 1 %}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if sameTagCount >= minCommonTags %}
+
+                            <h5 class="title is-5" ><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ commonTags }}</a></h5>
+
+                            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                            
+                            {% if maxRelatedCounter >= maxRelated %}
+                                {% break %}
+                            {% endif %}
+                        {% endif %}
+
+                    {% endfor %}
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+

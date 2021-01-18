@@ -1,0 +1,31 @@
+<nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="{{"/search" | relative_url }}">
+                            Search
+                        </a>
+                        <a class="button is-light" href="{{"/about" | relative_url }}">
+                        About
+                        </a>
+                        <a class="button is-light" href="{{"/contact" | relative_url }}">
+                        Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
