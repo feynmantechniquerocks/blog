@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                        About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                        Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;">
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+                <h1 class="title is-3">Contact</h1>
+                
+                <div class="box">
+                    <figure class="image is-text-centered">
+                    <img src="/assets/images/get-in-touch-contact-image.jpg">
+                    <figcaption><small></small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>This blog was built with Jekyll and hosted on Github Pages. That means there is no backend.</p>
+<br>
+<p>There are some solutions to add forms to static Jekyll blog such as formspree but I don't want to deal with them at the moment.</p>
+<br>
+<p>Maybe I can set up a newsletter or a Discord server in the future but not for now.</p>
+<br>
+<p>If you want to get in touch with me. Please send an email to <a href="mailto:feynmantechniquerocks@gmail.com"><b>feynmantechniquerocks@gmail.com</b></a></p>
+<br>
+<p>You can also connect with me using the social media buttons down below.</p>
+
+            </div>
+            
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
