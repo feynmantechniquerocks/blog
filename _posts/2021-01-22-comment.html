@@ -1,0 +1,55 @@
+---
+layout: post
+title: "How to make comments in C#"
+subtitle: "Make your programs clear for all."
+permalink: /how-to-make-comments-in-csharp/
+date: 2021-01-22 23:45:13 -0400
+main_image_src: "/assets/images/comments.jpg"
+main_image_caption: "Photo credit - Cristian Dina"
+main_image_alt: "An iPhone with pink comment-like post-its on a table"
+categories: ['c#', 'visual studio', 'comment', 'comments']
+---
+
+<p>This is going to be a short post.
+</p>
+<br>
+
+<p><a href="https://feynmantechnique.rocks/hello-world-in-csharp/">In the last post</a>, we've written our <strong>Hello World</strong> program. This program is simple and basically does nothing. 
+    We are going to write more complex programs in the future. We need to leave some reminders for us and for other people who might read the source code later on.
+</p>
+<br>
+
+<p>These reminders are called comments in the programming world. Comments are too important and we need to learn how to use them effeciently.</p>
+<br>
+
+<p>There are three ways to make comments in C#.     
+</p>
+<br>
+
+<p>The first one is <b>two slashes: //</b></p>
+<br>
+
+ {% highlight c# %}
+
+ // This is the first comment.
+ // You can make as many comments as you'd like
+ // You can make multiline comments as well.
+ Console.WriteLine("Comments are so fun !!!"); // Comments also can be here.
+
+ {% endhighlight %}
+
+<p>The second one is <b>the slash and the asterisk: /* */</b></p>
+<br>
+
+{% highlight c# %}
+
+/* This is the first comment.
+You can make as many comments as you'd like
+You can make multiline comments as well. */
+
+Console.WriteLine("Comments are so fun !!!"); /* Comments also can be here. */
+
+{% endhighlight %}
+
+<p>The third one is called <b>XML Documentation Comments</b>. We'll learn about this one when we talk about methods. For now, let's skip it.</p>
+<br>
