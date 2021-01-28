@@ -1,0 +1,102 @@
+---
+layout: post
+title: "Variables in C#"
+subtitle: "Learn how to define variables in C#"
+permalink: /variables-in-csharp/
+date: 2021-01-23 23:45:13 -0400
+main_image_src: "https://blogs.articulate.com/rapid-elearning/wp-content/uploads/sites/7/2016/01/variables.png"
+main_image_caption: "Photo credit - articulate.com"
+main_image_alt: "Question marks in different colors."
+categories: ['c#', 'visual studio', 'variable', 'variables']
+---
+
+<p>In Math, a variable is an unknown number in an equation. In programming, a variable is a place in computer memory that holds the information regarding our programs.
+</p>
+<br>
+
+<p>Variables are important in programming because they let us store the information and refer back to it when necessary.
+</p>
+<br>
+
+<p>Every variable has a name and a type. Variable type shows what kind of data can be stored in it. Variable types are a huge deal in C#. It's a type-safe language.
+</p>
+<br>
+
+<h1 class="title is-3">How to Defines Variable in C#</h1>
+
+<p>Defining a variable is very simple and straightforward in C#. All you have to do is to give your variable a name and define its type.</p>
+<br>
+
+{% highlight c# %}
+
+int temperature;
+
+{% endhighlight %}
+
+<p>The one-line code above defines a variable named temperature and its type is an integer. We'll get to data types later.</p>
+<br>
+
+<h1 class="title is-3">Assigning Values to Variables in C#</h1>
+
+<p>Assigning values to variables in C# is also very simple and straightforward. Just use an equal operator ("=") and the value. </p>
+<br>
+
+{% highlight c# %}
+
+temperature = 42; // If the variable is declared, no need to write its type.
+
+int humidity = 58; // Variable declaration and assigning can be done in the same line.
+
+{% endhighlight %}
+
+<h1 class="title is-3">Getting the Values of Variables in C#</h1>
+
+<p>If we need to get the value of a variable, we can just call the name of it to use its value. Let's see the complete code.</p>
+<br>
+
+{% highlight c# %}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hello_World
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // This is the first variable.
+            int temperature;
+
+            // Let's assign a value to our variable.
+            temperature = 42;
+
+            // Here is another variable, declared and assigned in the same line.
+            int humidity = 58;
+
+            // Let's get the value of the variables and write them on the console.
+            Console.WriteLine(temperature);
+            Console.WriteLine(humidity);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+{% endhighlight %}
+
+<h1 class="title is-3">How to Name Variables Properly</h1>
+
+<p>To name variables properly:
+    <div class="content">
+        <ul>
+            <li><b>Follow the rules:</b> According to C# docs, a variable name have to start with a letter or underscore (_). C#'s keywords can not be used as variable names. If you don't follow these rules, the compiler will raise errors.</li>
+            <li><b>Choose descriptive names:</b> A good name should describe its content. If you are going to store the temperature of the kitchen, name it <b>temperature</b> or <b>kitchenTemperature</b>. Do not call it kittemp.</li>
+            <li><b>Avoid using abbreviation:</b> If you use an abbreviation that is known to all people, it's OK to use it. Such as HTML, JS, etc. Otherwise, stop using abbreviations. Don't call it ktchtmp. A good rule of thumb is that if you're the only one who uses this abbreviation, avoid using it.</li>
+            <li><b>Try to use language standards:</b> This is optional but I think it's important as well. If you're using C# try to use camelCase. If you're using Python try to use snake_case etc. Check out your language's community to see which one used frequently.</li>
+        </ul>
+    </div>
+</p>
