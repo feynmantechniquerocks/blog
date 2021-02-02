@@ -1,0 +1,362 @@
+---
+layout: post
+title: "Integral types in C#"
+subtitle: "Learn how to store numbers in C#."
+permalink: /integral-types-in-csharp/
+date: 2021-01-24 23:45:13 -0400
+main_image_src: "/assets/images/integral-types.jpg"
+main_image_caption: "Photo credit - Black ice on pexels.com"
+main_image_alt: "numbers, a glass and an open notebook"
+categories: ['c#', 'data type', 'integral', 'integer', 'integral types', 'integer types', 'data structure']
+---
+
+<p>In this post, I'm going to discuss about integral data types which are <b>byte, short, int, long, sbyte,ushort, uint, ulong </b> and <b>char</b>
+</p>
+<br>
+
+<p>We use integral types (sometimes referred as integer types) to store numeric values.
+</p>
+<br>
+
+<h1 class="title is-3">Byte</h1>
+
+<p>Let's start with byte.</p>
+<br>
+
+{% highlight c# %}
+
+//Let's create a byte variable.
+byte myByteVar = 2;
+
+//Let's see the maximum and minimum value a byte can store.
+Console.WriteLine("Max. Value: {0}", byte.MaxValue);
+Console.WriteLine("Min. Value: {0}", byte.MinValue);
+
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 255
+Min. Value: 0
+
+{% endhighlight %}
+
+<p>Byte type stores 8-bit unsigned(I'll get to that later) int from 0 to 255.</p>
+<br>
+
+<h1 class="title is-3">Short</h1>
+
+<p>Let's continue with short.</p>
+
+{% highlight c# %}
+
+//Let's create a short variable.
+short myShortVar = 23;
+
+//Let's see the maximum and minimum value a short can store.
+Console.WriteLine("Max. Value: {0}", short.MaxValue);
+Console.WriteLine("Min. Value: {0}", short.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 32767
+Min. Value: -32768
+
+{% endhighlight %}
+
+<p>Short type stores 16-bit signed int from -32768 to 32767. If you are coming from hardware background. You'll see this is a WORD.</p>
+<br>
+
+<h1 class="title is-3">Integer</h1>
+
+<p>Let's continue with integer. Int data type could be the most used one. I'll get to why later.</p>
+
+{% highlight c# %}
+
+//Let's create a integer variable.
+int myIntVar = 58;
+
+//Let's see the maximum and minimum value an integer can store.
+Console.WriteLine("Max. Value: {0}", int.MaxValue);
+Console.WriteLine("Min. Value: {0}", int.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 2147483647
+Min. Value: -2147483648
+
+{% endhighlight %}
+
+<p>Integer type stores 32-bit signed int from -2147483648 to 2147483647. If you are coming from hardware background. You'll see this is a double word (DWORD).</p>
+<br>
+
+<h1 class="title is-3">Long</h1>
+
+<p>If you have so much to store, long type is the way to go.</p>
+
+{% highlight c# %}
+
+//Let's create a long variable.
+long myLongVar = 58;
+
+//Let's see the maximum and minimum value an long can store.
+Console.WriteLine("Max. Value: {0}", long.MaxValue);
+Console.WriteLine("Min. Value: {0}", long.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 9223372036854775807
+Min. Value: -9223372036854775808
+
+{% endhighlight %}
+
+<p>Long type stores 32-bit signed int from -9223372036854775808 to 9223372036854775807. This is huge.</p>
+<br>
+
+<h1 class="title is-3">Signed/Unsigned Types</h1>
+
+<p>If a type is signed, it means it can be positive or negative. If a type is unsigned, it means it can be only positive. This would allow us to go twice as high but of course there is a downside, we can't use negative values.</p>
+<br>
+
+<p>We've covered short, int, and long types. If you check their ranges you'll see that they can be positive and negative. That means they are signed types. Byte on the other hand can store value between 0-255. That means it is unsigned type.</p>
+<br>
+
+<p>All these types also have unsigned counterparts. (Signed counterpart for byte). Let's learn about them as well.</p>
+<br>
+
+<h1 class="title is-3">sByte</h1>
+
+<p>This is signed version of the byte type.</p>
+
+{% highlight c# %}
+
+//Let's create a sbyte variable.
+sbyte mysByteVar = -10;
+
+//Let's see the maximum and minimum value an sbyte can store.
+Console.WriteLine("Max. Value: {0}", sbyte.MaxValue);
+Console.WriteLine("Min. Value: {0}", sbyte.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 127
+Min. Value: -128
+
+{% endhighlight %}
+
+<p>sByte type stores 8-bit signed int from -128 to 127.</p>
+<br>
+
+<h1 class="title is-3">uShort</h1>
+
+<p>This is unsigned version of the short type.</p>
+
+{% highlight c# %}
+
+//Let's create a ushort variable.
+ushort mysByteVar = 280;
+
+//Let's see the maximum and minimum value a ushort can store.
+Console.WriteLine("Max. Value: {0}", ushort.MaxValue);
+Console.WriteLine("Min. Value: {0}", ushort.MinValue)
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 65535
+Min. Value: 0
+
+{% endhighlight %}
+
+<p>sByte type stores 16-bit unsigned int from 0 to 65535.</p>
+<br>
+
+<h1 class="title is-3">uInteger</h1>
+
+<p>This is unsigned version of the integer type.</p>
+
+{% highlight c# %}
+
+//Let's create a uint variable.
+uint myuIntVar = 280;
+
+//Let's see the maximum and minimum value a uint can store.
+Console.WriteLine("Max. Value: {0}", uint.MaxValue);
+Console.WriteLine("Min. Value: {0}", uint.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 4294967295
+Min. Value: 0
+
+{% endhighlight %}
+
+<p>uInt type stores 32-bit unsigned int from 0 to 4294967295.</p>
+<br>
+
+
+<h1 class="title is-3">uLong</h1>
+
+<p>This is unsigned version of the long type.</p>
+
+{% highlight c# %}
+
+//Let's create a ulong variable.
+ulong myuLongVar = 280;
+
+//Let's see the maximum and minimum value a ulong can store.
+Console.WriteLine("Max. Value: {0}", ulong.MaxValue);
+Console.WriteLine("Min. Value: {0}", ulong.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Max. Value: 18446744073709551615
+Min. Value: 0
+
+{% endhighlight %}
+
+<p>uLong type stores 64-bit unsigned int from 0 to 18446744073709551615.</p>
+<br>
+
+
+<h1 class="title is-3">Char</h1>
+
+<p>We are almost done with integral types. We only have one more to discuss about. It's Char type. It's used to store single character or a letter. You might think why we cover "char" as integral type since it's used to store characters.</p>
+<br>
+
+<p>It's because, under the hood, each char is assigned to a single number. When we use char, the computer will know we use it as a letter so it will treat char as letter not number. For example if you print char, the computer will print out the letter not the number.
+</p>
+
+{% highlight c# %}
+
+//Let's create a char variable.
+char myCharVar = 'c';
+char anotherCharVar = '&';
+
+//Let's print the char variables on the console.
+Console.WriteLine("myCharVar: {0}" , myCharVar);
+Console.WriteLine("anotherCharVar: {0}", anotherCharVar);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+myCharVar: c
+myCharVar: &
+
+{% endhighlight %}
+
+<p>char type stores 16-bit data. </p>
+<br>
+
+<h1 class="title is-3">Summary Table</h1>
+
+
+<p>Here is the table that gives some information about these integral data types.</p>
+<br>
+
+<div class="columns">
+    <div class="column">
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Byte Size</th>
+                    <th>Bit Size</th>
+                    <th>Range</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>byte</td>
+                    <td>1 byte</td>
+                    <td>8 bit</td>
+                    <td>0 to 255</td>
+                    </tr>
+                <tr>
+                    <td>short</td>
+                    <td>2 byte</td>
+                    <td>16 bit</td>
+                    <td>32,768 to 32,767</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>4 byte</td>
+                    <td>32 bit</td>
+                    <td>2,147,483,648 to 2,147,483,647</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>8 byte</td>
+                    <td>64 bit</td>
+                    <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                </tr>
+                <tr>
+                    <td>sbyte</td>
+                    <td>1 byte</td>
+                    <td>8 bit</td>
+                    <td>-128 to +127</td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>2 byte</td>
+                    <td>16 bit</td>
+                    <td>0 to 65,535</td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>4 byte</td>
+                    <td>32 bit</td>
+                    <td>0 to 4,294,967,295</td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>8 byte</td>
+                    <td>64 bit</td>
+                    <td>0 to 18,446,744,073,709,551,615</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>2 byte</td>
+                    <td>16 bit</td>
+                    <td>U+0000 to U+ffff</td>
+                </tr>
+            
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
