@@ -1,0 +1,157 @@
+---
+layout: post
+title: "Floating point types in C#"
+subtitle: "Learn how to store real numbers in C#."
+permalink: /float-point-types-in-csharp/
+date: 2021-01-25 23:45:13 -0400
+main_image_src: "https://www.open.edu/openlearn/ocw/pluginfile.php/1313938/mod_oucontent/oucontent/67502/103e4c8b/3485f92c/bltl_m1_s1_4a.png"
+main_image_caption: "Photo credit - open.edu"
+main_image_alt: "Various ways to display real numbers"
+categories: ['c#', 'data type', 'floating', 'floating point', 'real number', 'decimal', 'data structure']
+---
+
+<p>In the math world, there are real numbers. Counterparts of real numbers in C# are <b>float, double, </b> and <b>decimal.</b>
+</p>
+<br>
+
+<p>If we didn't have real numbers, we wouldn't be able to store data such as 2.8 .
+</p>
+<br>
+
+<h1 class="title is-3">Double</h1>
+
+<p>Double stores 8 byte of data. It has 15 or 16 digits of precision. Double is the most precise data type. </p>
+<br>
+
+{% highlight c# %}
+
+//Let's create a float variable.
+double myDoubleVariable = 12.34546874;
+
+//Let's see the maximum and minimum value a double can store.
+Console.WriteLine("myDoubleVariable: {0}", myDoubleVariable);
+Console.WriteLine("Max. Value: {0}" , double.MaxValue);
+Console.WriteLine("Min Value: {0}", double.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+myDoubleVariable: 12.34546874
+Max. Value: 1.79769313486232E+308
+Min Value: -1.79769313486232E+308
+
+{% endhighlight %}
+
+<h1 class="title is-3">Float</h1>
+
+<p>Float stores 4 byte of data. It has 7 digits of precision. </p>
+<br>
+
+{% highlight c# %}
+
+//Let's create a float variable.
+float myFloatVariable = 12.34546f;
+
+//Let's see the maximum and minimum value a float can store.
+Console.WriteLine("myFloatVariable: {0}", myFloatVariable);
+Console.WriteLine("Max. Value: {0}" , float.MaxValue);
+Console.WriteLine("Min Value: {0}", float.MinValue);
+
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+myFloatVariable: 12.34546
+Max. Value: 3.402823E+38
+Min Value: -3.402823E+38
+
+{% endhighlight %}
+
+<p>Have you seen the <b>f</b> at the end of variable definition ? When you define a float point variable, you have to put <b>f</b> at the end of the definition.</p>
+<br>
+
+<p>If you don't put the <b>f</b> at the end, the compiler will treat it as double. We specifically have to tell the compiler it is float not double.</p>
+<br>
+
+<h1 class="title is-3">Decimal</h1>
+
+<p>Last data type for floating point types is decimal. This data type was built to make money related calculations but it doesn't have any hardware-level support so it's slow but it doesn't have losing accuracy issue that float and double have. </p>
+<br>
+
+<p>It can store 16 bytes of data and has 28 or 29 digits of precision.</p>
+
+{% highlight c# %}
+
+//Let's create a decimal variable.
+decimal myDecimalVariable = 12.345m;
+
+//Let's see the maximum and minimum value a decimal can store.
+Console.WriteLine("myDecimalVariable: {0}", myDecimalVariable);
+Console.WriteLine("Max. Value: {0}" , decimal.MaxValue);
+Console.WriteLine("Min Value: {0}", decimal.MinValue);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+myDecimalVariable: 12.345
+Max. Value: 79228162514264337593543950335
+Min Value: -79228162514264337593543950335
+
+{% endhighlight %}
+
+<p>Just like float, we need to put <b>m</b> at the end of variable definition when we define a decimal type variable.</p>
+<br>
+
+<p>If you don't put the <b>f</b> at the end, the compiler will treat it as double. We specifically have to tell the compiler it is decimal not double.</p>
+<br>
+
+<p>Some people say that decimal is not a floating point type but I think it's fine to mention about it under this title.</p>
+<br>
+
+<h1 class="title is-3">Summary Table</h1>
+
+
+<p>Here is the table that gives some information about these integral data types.</p>
+<br>
+
+<div class="columns">
+    <div class="column">
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Byte Size</th>
+                        <th>Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>float</td>
+                        <td>4 byte</td>
+                        <td>-3.402823E+38 to 3.402823E+38</td>
+                        </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 byte</td>
+                        <td>-1.79769313486232E+308 to 1.79769313486232E+308</td>
+                    </tr>
+                    <tr>
+                        <td>decimal</td>
+                        <td>16 byte</td>
+                        <td>-79228162514264337593543950335 to 79228162514264337593543950335</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
