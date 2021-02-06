@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Bool type in C#"
+subtitle: "Learn how to store non-number data in C#."
+permalink: /bool-in-csharp/
+date: 2021-01-26 23:45:13 -0400
+main_image_src: "https://www.uckg.org/wp-content/uploads/2018/02/True-False.jpg"
+main_image_caption: "Photo credit - uckg.org"
+main_image_alt: "True and False texts on a blue surface."
+categories: ['c#', 'data type', 'non-number', 'bool', 'boolean', 'true', 'false', 'true or false', 'data structure', 'decision', 'decision making']
+---
+
+<p>We have covered number related data types in the last two posts. Now it's time to talk about non-number types. Let's start with boolean data type and keep it short.</b>
+</p>
+<br>
+
+<p>Bool data type is used to store boolean values which also known as <b>truth values.  </b>
+</p>
+<br>
+
+<p>A bool keeps track of two states that means it only need 1-bit storage on the memory. Smallest memory unit that can be addressed is byte so a bool occupies a whole byte.</p>
+<br>
+
+
+{% highlight c# %}
+
+//Let's create a boolean variables.
+bool isTheButtonPressed = true;
+bool isTheWindowOpened = false;
+
+//Let's print the boolean variables on the console.
+Console.WriteLine("isTheButtonPressed: {0}", isTheButtonPressed);
+Console.WriteLine("isTheWindowOpened: {0}", isTheWindowOpened);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+isTheButtonPressed: True
+isTheWindowOpened: False
+
+{% endhighlight %}
+
+<p>Bool types are very important in the programming. We use them heavily especially during the decision making process.</p>
