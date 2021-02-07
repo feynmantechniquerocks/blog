@@ -1,0 +1,200 @@
+---
+layout: post
+title: "Basic Math in C#"
+subtitle: "Learn basic math instructions in C#."
+permalink: /basic-math-in-csharp/
+date: 2021-01-28 23:45:13 -0400
+main_image_src: "https://i.ytimg.com/vi/TMubSggUOVE/maxresdefault.jpg"
+main_image_caption: "Photo credit - The Organic Chemistry Tutor from Youtube"
+main_image_alt: "Some math calculations"
+categories: ['c#', 'basic math', 'number', 'addition', 'substraction', 'division', 'multiplication', 'operator', 'operand', 'operations', 'unary', 'binary', 'tenary']
+---
+
+<p>Let's talk about the basic math operations in C#. We'll discover addition, substraction, division, multiplication, remainder operator and so on.</b>
+</p>
+<br>
+
+<p>Before we get into details, let me introduce the terms operations and operators.
+    <div class="content">
+        <ul>
+            <li><b>Operation:</b> A calculation that outputs a result. (Example: Addition, Division etc.). An operations consists of two parts.
+                <ul>
+                    <li><b>Operator:</b> The sign that defines the operation. (Example: Minus (-) sign is the operator for substraction operation.)In addition to these operators, C# provides some other operators(binary operators, unary operators, ternary operators etc.) as well.</li>
+                    <li><b>Operand:</b> The the thing that operator works on. (Example: 8-2. 8 and 2 here are the operands.)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</p>
+<br>
+
+<article class="message is-info">
+    <div class="message-body">
+        I have to mention about the <b>assignment operator (=)</b> before we move forward. Equal sign means two things equal to each other in Math. In programming equal sign means the things on the right side calculated and assigned to the thing on the left side.
+    </div>
+</article>
+<br>
+
+<h1 class="title is-3">Addition, Substraction, Division and Multiplication</h1>
+
+<p>Let's do the 4 basic math operations in C#.</p>
+<br>
+
+{% highlight c# %}
+
+// Addition
+int a = 8 + 5;
+
+// Substraction
+int b = 19 - 12;
+
+// Multiplication
+int c = 11 * 11;
+
+// Division - To have decimal point, operands should be a floating point type.
+float d = 12 / 2;
+
+// Math operations can be used together.
+int e = 12 + 25 - 14 - ((25 / 5) * 12);
+
+// Print results on the console
+Console.WriteLine("Result of the addition - a is: {0}", a);
+Console.WriteLine("Result of the substraction - b is: {0}", b);
+Console.WriteLine("Result of the multiplication - c is: {0}", c);
+Console.WriteLine("Result of the division - d is: {0}", d);
+Console.WriteLine("Result of operations used together - e is: {0}", e);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Result of the addition - a is: 13
+Result of the substraction - b is: 7
+Result of the multiplication - c is: 121
+Result of the division - d is: 6
+Result of operations used together - e is: -37
+
+{% endhighlight %}
+
+<p>If you use math operations together, it's better to have them grouped to define priority. </p>
+<br>
+
+<p>Let's write a small program that calculates the area of a triangle. The formula for calculation the area of a triangle is A = (1/2)*b*h where b is the base of the triangle and h is the height of it.</p>
+<br>
+
+{% highlight c# %}
+
+// Area of a triangle.
+float b = 12;
+float h = 5;
+float area = (b * h) / 2;
+
+Console.WriteLine("Area of the given triangle is: " + area);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Area of the given triangle is: 30
+
+{% endhighlight %}
+
+<p>Please check how I print the result on the console. I've used string concatenation to combine string and number together.</p>
+<br>
+
+<h1 class="title is-3">The Remainder Operator</h1>
+
+<p>The remainder operator is a special operator in C# which also known as modulo operator or simply mod. We use it to get the remainder of a division. If we dive 12 by 7, we get 1 as result and 5 as the remainder. C# uses <b>percent sign (%)</b> as the remainder operator. </p>
+<br>
+
+{% highlight c# %}
+
+int numberOfToys = 42;
+int numberOfBabies = 11;
+
+int remainingToys = numberOfToys % numberOfBabies;
+
+Console.Write("Number of remaining toys is: {0}", remainingToys);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+Number of remaining toys is: 9
+
+{% endhighlight %}
+
+<p>In the above example code, we have 42 toys to shared between 11 babies. We give each baby the same number of toys which is 3 in this case. We have 9 toys remained. That's an example of where we use the remainder operator.</p>
+<br>
+
+<h1 class="title is-3">Unary Operators</h1>
+
+<p>Unary operators are used to indicate the sign of the number. They only work with one operand and make it positive or negative.</p>
+<br>
+
+{% highlight c# %}
+
+int a = +12;
+int b = -25;
+
+int c = 24;
+int d = -c;
+
+Console.WriteLine("a: {0}", a);
+Console.WriteLine("b: {0}", b);
+Console.WriteLine("c: {0}", c);
+Console.WriteLine("d: {0}", d);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+a: 12
+b: -25
+c: 24
+d: -24
+
+{% endhighlight %}
+
+<h1 class="title is-3">Compound Operators</h1>
+
+<p>We often get the current value of a variable, modify it and then update the variable with the new value. In order to make these process easier, C# provides us compound operators.</p>
+<br>
+
+{% highlight c# %}
+
+int a = 44;
+
+a += 5;
+Console.WriteLine("This would make a: {0}", a);
+
+a -= 9;
+Console.WriteLine("This would make a: {0}", a);
+
+a /= 10;
+Console.WriteLine("This would make a: {0}", a);
+
+a *= 2;
+Console.WriteLine("This would make a: {0}", a);
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+This would make a: 49
+This would make a: 40
+This would make a: 4
+This would make a: 8
+
+{% endhighlight %}
+
