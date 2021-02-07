@@ -1,0 +1,103 @@
+---
+layout: post
+title: "Escape Character and String Interpolation in C#"
+subtitle: "Learn how to get data from the user in C#."
+permalink: /escape-character-and-string-interpolation-in-csharp/
+date: 2021-01-30 23:45:13 -0400
+categories: ['c#', 'escape', 'escape character', 'string', 'string interpolation']
+---
+
+<p>This is going to be a short post about escape character and string interpolation.</b>
+</p>
+<br>
+
+<p>As you know we've been writing console applications so far. It's very common to print something on the console or ask for user input. I believe both escape character and string interpolation will be very useful for our console programs so I think I have to address them at this point.</b>
+</p>
+<br>
+
+<h1 class="title is-3">Escape Character</h1>
+
+<p>If you're working with strings, you will have to use escape character eventually. If we didn't have escape characters in programming languages, we wouldn't be able to print some special characters such as <b>quotes(")</b>.</p>
+<br>
+
+<p>Let's see the escape character in action. Let our program to print out quotes to console.</p>
+<br>
+
+{% highlight c# %}
+
+// Print " to the console.
+Console.WriteLine(" \" ");
+
+// Print "Hello World!" to the console.
+Console.WriteLine(" \"Hello World! \" ");
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+"
+"Hello World! "
+
+{% endhighlight %}
+
+<p>As you can see above, backslash is the escape character for C#. If you start the string sequence by using it, the compiler will treat the next character as plain text.</p>
+<br>
+
+<p>We have an edge case here. Imagine that you need to print backslash. Maybe you need to show the user a path on the system. What's going to happen then ? Well, in that case, just use double backslash.</p>
+<br>
+
+{% highlight c# %}
+
+// Print \ on the console.
+Console.WriteLine(" C:\\Users\\Documents ");
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+C:\Users\Documents
+
+{% endhighlight %}
+<br>
+
+<h1 class="title is-3">String Interpolation</h1>
+
+<p>I've used two techniques to display something to users. One of them is <b>string format</b>. </p>
+<br>
+
+{% highlight c# %}
+
+int myVar = 12;
+Console.WriteLine("My variable is: {0}", myVar);
+
+{% endhighlight %}
+
+<p>The other one is <b>string concatenation</b>.</p>
+<br>
+
+{% highlight c# %}
+
+int myVar = 12;
+Console.WriteLine("My variable is: " + myVar);
+
+{% endhighlight %}
+
+<p>These methods are fine and there is nothing wrong using them. However they are not my favourite methods. I like the <b>string interpolation</b> most. C# 6.0 introduced this concept.</p>
+<br>
+
+<p>Here is an example of string interpolation.</p>
+<br>
+
+{% highlight c# %}
+
+int myVar = 12;
+Console.WriteLine($"My variable is: {myVar}");
+
+{% endhighlight %}
+
+<p>We put a <b>dollar sign($)</b> before double quotes and that tells the compiler this isn't a regular string. It has some code that needs to be evaulated.</p>
+<br>
