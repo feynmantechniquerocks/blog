@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Getting User Input in C#"
+subtitle: "Learn how to get data from the user in C#."
+permalink: /user-input-in-csharp/
+date: 2021-01-29 23:45:13 -0400
+main_image_src: "https://public-media.interaction-design.org/images/ux-daily/56e2cfdabdb9e.jpg"
+main_image_caption: "Photo credit - interaction-design.org"
+main_image_alt: "A user is typing on the keybord of an iPad."
+categories: ['c#', 'user input', 'get data', 'information from the user', 'user']
+---
+
+<p>Our program might need information submitted from the user. We use ReadLine() method to get user input from the console.</b>
+</p>
+<br>
+
+{% highlight c# %}
+
+string userInput = Console.ReadLine();
+
+{% endhighlight %}
+
+<p>As you can see above, we store the user input in a string variable. That's right. The data type of the user input is always string. If we need user to input a number, we have to get the input as a string first then convert it to appropriate type.</p>
+<br>
+
+<p>Let's modify the triangle-area-calculation program we've written in the previous post. But this time get the base and height data from the user. Remember, The formula for calculation the area of a triangle is A = (1/2)*b*h where b is the base of the triangle and h is the height of it. </p>
+<br>
+
+{% highlight c# %}
+
+// Get the base length of the triangle from user.
+Console.WriteLine("Please input the b data of the triangle.");
+string bAsString = Console.ReadLine();
+double b = Convert.ToDouble(bAsString);
+
+// Get the height of the triangle from user.
+Console.WriteLine("Please input the h data of the triangle.");
+string hAsString = Console.ReadLine();
+double h = Convert.ToDouble(hAsString);
+
+// Do the calculations
+double area = (b * h) / 2;
+
+//Print the result on the console using string concatenation
+Console.WriteLine("Area of the given triangle is: " + area);
+
+{% endhighlight %}
+
+
+<p>Getting user input is very straightforward process in C#. All we need to remember is that we would convert the user input to the appropriate data type first using the Convert class.</p>
+<br>
