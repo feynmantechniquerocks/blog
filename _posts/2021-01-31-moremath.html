@@ -1,0 +1,117 @@
+---
+layout: post
+title: "More Math"
+subtitle: "Some edge cases to discuss."
+permalink: /more-math/
+date: 2021-01-31 23:45:13 -0400
+categories: ['c#', 'basic math', 'number', 'addition', 'substraction', 'division', 'multiplication', 'operator', 'operand', 'operations', 'unary', 'binary', 'tenary']
+---
+
+<p>I'd like to talk about some of the edge cases when dealing with math operations.</b>
+</p>
+<br>
+
+<h1 class="title is-3">Integer Division</h1>
+
+<p>If you divide and integer by another integer, you won't get any fractional numbers if any. It's called integer division. This could be handy from time to time. Important thing is to understand when it happens otherwise things could go messy.</p>
+<br>
+
+{% highlight c# %}
+
+int firstNumber = 12;
+int secondNumber = 5;
+
+int result = 12 / 5;
+
+// This will print 2 instead of 2.4.
+Console.WriteLine($"The result is {result}");
+Console.ReadLine();
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+The result is 2
+
+{% endhighlight %}
+<br>
+
+<h1 class="title is-3">Different Types and Casting</h1>
+
+<p>C# is a type-safe language. We mentioned about this before. If you want to have a math operations on two numbers, they have to be the same type. C# has a feature to make things easier for us in this case. It's called typecasting which also known as casting.</p>
+<br>
+
+<p>There are two types of casting.
+    <div class="content">
+        <ul>
+            <li><b>Implicit Casting:</b>C# will take care of the type conversions for us when we go from a narrower type to a wider type. This operation is also known as widening conversion.
+                For example int data type is narrower while long data type is wider. It's all about bit size.
+            </li>
+            <li><b>Explicit Casting: </b>We have to tell to do the type conversion to C# specifically when we go from a wider type to a narrower type. To do that, we simply put the type we want to convert in to parantheses.
+            </li>
+        </ul>
+    </div>
+</p>
+<article class="message is-info">
+    <div class="message-body">
+        Even though float data type and int data type has the same size (4 bytes.) float type is considered wider.
+    </div>
+</article>
+
+<p>Here is typecasting in action.</p>
+<br>
+
+{% highlight c# %}
+
+// This is implicit casting. No need to convert int to long.
+int a = 4;
+long b = 395515148;
+long sum = a + b;
+Console.WriteLine($"The sum is {sum}.");
+
+// This is explicit casting. Need to convert int to float.
+long c = 4;
+int d = 12;
+long anothersum = (int)c + d;
+Console.WriteLine($"The anothersum is {anothersum}.");
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+The sum is 395515152.
+The anothersum is 16.
+
+{% endhighlight %}
+<br>
+
+<h1 class="title is-3">Incrementing and Decrementing</h1>
+
+<p>Last thing I'd like to talk about is incrementing and decrementing. We often need to increment/decrement the value of a variable by 1. There is an easy way of doing that. </p>
+<br>
+
+{% highlight c# %}
+
+int a = 12;
+
+// Incrementing 
+a++;
+Console.WriteLine($"The value of a: {a}.");
+
+// Decrementing 
+a--;
+Console.WriteLine($"The value of a: {a}.");
+
+{% endhighlight %}
+
+<p>And output will be:</p>
+
+{% highlight c %}
+
+The value of a: 13.
+The value of a: 12.
+
+{% endhighlight %}
