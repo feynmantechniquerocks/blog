@@ -1,0 +1,271 @@
+---
+layout: post
+title: "Decision making C#"
+subtitle: "Learn how to make decisions in your program."
+permalink: /decision-making-in-csharp/
+date: 2021-02-02 23:45:13 -0400
+main_image_src: "https://d1sjtleuqoc1be.cloudfront.net/wp-content/uploads/2017/10/23215501/Untitled-design-4-860x574.jpg"
+main_image_caption: "Photo credit - translatemedia.com"
+main_image_alt: "A boy trying to make a decision on the path"
+categories: ['c#', 'decision', 'decision making', 'if', 'else', 'elseif', 'bool', 'conditional operator', 'relational operator', 'ternary operator', 'statement']
+---
+
+<p>Every program needs to make decisions at some point. These decisions are made based on the condition of a variable.</b>
+</p>
+<br>
+
+<h1 class="title is-3">If/Else/Else if Statement</h1>
+
+<p>We often use <b>if</b> statement (and some other form of it.) to make a decision in C#. Let's write a program that asks for the user's age. If the user is 18 or older, the user will be eligible to get a driving licence.</b>
+</p>
+<br>
+
+{% highlight c# %}
+
+Console.WriteLine("Please enter your age: ");
+string ageAsString = Console.ReadLine();
+int age = Convert.ToInt32(ageAsString);
+
+if (age >= 18)
+{
+    //This code block will be executed if the condition is true.
+    Console.WriteLine("You are eligible to have a driving licence.");
+}
+
+{% endhighlight %}
+
+<p>As you can see above, it's very easy to make a decision in C# using if statement. After if statement we have a parantheses that holds the condition variable.
+    If the condition evaluates true then the compiler will execute the code in curly braces, if it evaluates false it will skip the code block in curly braces and move on.
+</p>
+<br>
+
+<p>Let's update the code above add the else and else if.</p>
+<br>
+
+{% highlight c# %}
+
+Console.WriteLine("Please enter your age: ");
+string ageAsString = Console.ReadLine();
+int age = Convert.ToInt32(ageAsString);
+
+if (age >= 18)
+{
+    //This code block will be executed if the condition is true.
+    Console.WriteLine("You are eligible to have a driving licence.");
+}
+else if ( age < 18){
+    //This code block will be executed if the condition is true
+    Console.WriteLine("Sorry! You can't have a driving licence.");
+}
+else {
+    //This code block will be executed if none of the above is true
+    Console.WriteLine("Are you sure you've entered a valid number ?");
+
+{% endhighlight %}
+
+
+<p>We don't know whether the condition will be true or false. We can make decisions for both options using else and elseif.</p>
+<br>
+
+<article class="message is-info">
+    <div class="message-body">
+        If there is only one statement, there is no need to use curly braces.
+{% highlight c# %}
+
+if (age >= 18)
+    Console.WriteLine("You are eligible to have a driving licence.");
+else 
+    Console.WriteLine("Sorry! You can't have a driving licence.");
+{% endhighlight %}
+    </div>
+</article>
+
+<h1 class="title is-3">Relational Operators</h1>
+
+<p>Most of the time we make comparions to have a conditional variables. We use relational operators to compare two operands. 
+There are 6 relational operators.
+<div class="content">
+    <ul>
+        <li> <b>==</b>: Checks if the two operands are equal.</li>
+        <li> <b>!=</b>: Checks if the two operands are not equal.</li>
+        <li> <b><</b>: Checks if the two left side operand is smaller than the right side operand.</li>
+        <li> <b>></b>: Checks if the two left side operand is greater than the right side operand.</li>
+        <li> <b><=</b>: Checks if the two left side operand is smaller than or equal to the right side operand.</li>
+        <li> <b>>=</b>: Checks if the two left side operand is greater than or equal to the right side operand.</li>
+    </ul>
+</div>
+</p>
+<br>
+
+<h1 class="title is-3">Bools in Decision Making</h1>
+
+<p>It's very common to use bools in decision making. This is valid for all programming languages. Here is an example.</p>
+<br>
+
+{% highlight c# %}
+
+int speedLimit = 120;
+Console.WriteLine("What is your speed ?");
+int yourSpeed = Convert.ToInt32(Console.ReadLine());
+
+bool isAllowed = yourSpeed <= speedLimit;
+
+if (isAllowed)
+{
+    Console.WriteLine("Your speed is allowed on this road.");
+}
+else
+{
+    Console.WriteLine("Your too fast. Slowdown !");
+}
+{% endhighlight %}
+
+<article class="message is-info">
+    <div class="message-body">
+        As you can see above, relational operators return a bool value so they can be used in a way I used above. 
+    </div>
+</article>
+
+<p>It's also possible to logical opposite of a bool in decision making. Using <b>! operator.</b> </p>
+<br>
+
+{% highlight c# %}
+
+int ageLimit = 21;
+Console.WriteLine("What is your age ?");
+int yourAge = Convert.ToInt32(Console.ReadLine());
+
+bool isAllowed = (yourAge >= ageLimit);
+
+if (!isAllowed)
+{
+    Console.Write("You can't enter the bar.");
+}
+else
+{
+    Console.WriteLine("What do you want to drink ?");
+}
+{% endhighlight %}
+
+<h1 class="title is-3">Logical Operators (AND and OR)</h1>
+
+<p>These are the logical equivalent of AND and OR operators.
+    <div class="content">
+        <ul>
+            <li> <b>AND Operator:</b> If the all operands are True, the condition will be True.  </li>
+            <li> <b>OR Operator:</b> If any of the operands is True, the condition will be True.  </li>
+        </ul>
+    </div>
+</p>
+<br>
+
+{% highlight c# %}
+
+// AND Operator.
+int age = 25;
+int salary = 5000;
+
+if (age >= 20 && salary > 2000)
+{
+    // Both are true so this block will be executed.
+    Console.WriteLine("You're welcome to the club");
+}
+
+// OR Operator.
+int year = 4;
+int km = 120000;
+
+if (year > 3 || km > 150000)
+{
+    // Only one of them is True but it's enough to execute this block.
+    Console.WriteLine("We need to replace your car.");
+}
+
+{% endhighlight %}
+
+<h1 class="title is-3">Ternary Operator</h1>
+
+<p>Ternary operators work on three operands unlike unary operators or binary operators. Ternary operator is also called the conditional operator and it works like if-else statement.</p>
+<br>
+
+<p>The way of using ternary operator is like: </p>
+<br>
+
+{% highlight c# %}
+
+(condition as bool) ? Value(if true) : Value (if false)
+
+{% endhighlight %}
+
+<p>Here is an example:</p>
+<br>
+
+{% highlight c# %}
+
+int grade = 70;
+Console.WriteLine((grade>65) ? "You passed!" : "You failed!");
+
+{% endhighlight %}
+
+<p>The output will be:</p>
+<br>
+
+{% highlight c %}
+
+You passed!
+
+{% endhighlight %}
+
+<p>Ternary operator is a one-liner so it's nice to know it but for me it reduces the readability so I wouldn't use it for most cases.</p>
+<br>
+
+<h1 class="title is-3">Switch Statement</h1>
+
+<p>The last statement in decision making I'd like to talk about is <b>Switch Statement</b>. Switch statement and If statement can be used interchangeably for most cases.
+Sometimes using one of them instead of the other can be more readable. </p>
+<br>
+
+{% highlight c# %}
+
+int carChoice = 2;
+
+switch (carChoice)
+{
+    case 1:
+        Console.WriteLine("BMW");
+        break;
+    case 2:
+        Console.WriteLine("Mercedes");
+        break;
+    case 3:
+        Console.WriteLine("Audio");
+        break;
+    case 4:
+        Console.WriteLine("WW");
+        break;
+    case 5:
+        Console.WriteLine("Opel");
+        break;
+    case 6:
+        Console.WriteLine("Fiat");
+        break;
+}
+
+{% endhighlight %}
+
+<p>The output will be: </p>
+
+{% highlight c# %}
+
+Mercedes 
+
+{% endhighlight %}
+
+<p>Switch statement doesn't allow logical operators as case condition. If this is the case, we could only use if statement not switch.</p>
+<br>
+
+<article class="message is-info">
+    <div class="message-body">
+        <b>break</b> should be used for every case unlike C++ and Java. Otherwise the compiler will raise an error. 
+    </div>
+</article>
