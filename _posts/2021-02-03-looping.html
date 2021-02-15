@@ -1,0 +1,218 @@
+---
+layout: post
+title: "Looping in C#"
+subtitle: "Learn how to loop."
+permalink: /looping-in-csharp/
+date: 2021-02-03 23:45:13 -0400
+main_image_src: "https://cdn.pixabay.com/photo/2017/08/27/17/23/looping-2686892_960_720.jpg"
+main_image_caption: "Photo credit - tdahl from pixabay.com"
+main_image_alt: "A roller coaster that looks like a loop."
+categories: ['c#', 'loop', 'while', 'dowhile', 'do while', 'for', 'foreach', 'break' ]
+---
+
+<p>Loops allow us to repeat same code block over and over again. It will make more sense once we learn about arrays and other data types.</b>
+</p>
+<br>
+
+<h1 class="title is-3">The While Loop</h1>
+
+<p>While loop is used to repeat same code block over and over again unless a certain condition is met.</b>
+</p>
+<br>
+
+{% highlight c# %}
+
+int x = 1;
+
+while (x <= 10)
+{
+    Console.WriteLine(x);
+    x++;
+}
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+{% endhighlight %}
+
+
+<p>The value of x is equal to 1 at the beginning. The compiler will check the condition of the while loop first. X is smaller than 10 so the condition will be true.
+    The compiler will execute the code block inside curly braces. After the execution is done, the compiler will go back to the while loop again and it will repeat the process until it meets the condition (or we specifically tell the compiler to break the loop.).
+</p>
+<br>
+
+<h1 class="title is-3">The Do-While Loop</h1>
+
+<p>Do-While loop is another form of a while loop. The code block will be executed in while loop only if the condition is met. Sometimes the code block will be skipped.
+    Do-While on the otherhand is a bit different. It executes the code block first then it checks the condition. If it is met, the code block will be executed again. </b>
+</p>
+<br>
+
+{% highlight c# %}
+
+int num;
+int guess = 7;
+do
+{
+    Console.WriteLine("Let's try to guess the number I choosed.");
+    string numAsString = Console.ReadLine();
+    num = Convert.ToInt32(numAsString);
+    if (num != guess)
+    {
+        Console.WriteLine("Try again !");
+    }
+} while (num != guess);
+
+Console.WriteLine("That's correct. It was 7");
+{% endhighlight %}
+
+
+<p>Here is a basic number-guesser program using do-while loop. This can be done without using a do-while loop of course but I think it's good example.
+</p>
+<br>
+
+<h1 class="title is-3">The For Loop</h1>
+
+<p>The last loop is <b>the for loop.</b> It's one of the most used ones in programming. It can do all the job a while loop does. Usually we use it to go through elements of an array and do something with it.</p> 
+<br>
+
+<p>Here is the same example we did with while loop:</p>
+<br>
+
+{% highlight c# %}
+
+for (int x=1; x<=10; x++)
+{
+    Console.WriteLine(x);
+}
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+{% endhighlight %}
+
+<h1 class="title is-3">Break out of a Loop</h1>
+
+<p><b>Break</b> statement is used to break out of a loop. If you don't want to continue to the loop for any reason then we can break out of it using the break statement.</p>
+<br>
+
+<p>Let's do the number-guesser program again using break.
+</p>
+<br>
+
+{% highlight c# %}
+
+int num = 0;
+
+while (num <= 10)
+{
+    num++;
+    if (num == 8)
+    {
+        Console.WriteLine("I found the 8. Breaking out of the loop.");
+        break;
+    }
+    Console.WriteLine("This is {0}. I'm looking for 8. ", num);
+
+}
+
+Console.WriteLine("Hey! I'm out of the loop.");
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+This is 1. I'm looking for 8.
+This is 2. I'm looking for 8.
+This is 3. I'm looking for 8.
+This is 4. I'm looking for 8.
+This is 5. I'm looking for 8.
+This is 6. I'm looking for 8.
+This is 7. I'm looking for 8.
+I found the 8. Breaking out of the loop.
+Hey! I'm out of the loop.
+
+{% endhighlight %}
+
+
+<h1 class="title is-3">Continue to the Next Iteration</h1>
+
+<p>Break statement would break out of the loop but we sometimes need to just skip a particular value and continue with the next iteration.
+    We use <b>continue</b> statement to do that.
+</p>
+<br>
+
+<p>Here is an example: </p>
+<br>
+
+{% highlight c# %}
+
+for (int x = 1; x <= 10; x++)
+{
+    if (x == 6)
+    {
+        continue;
+    }
+
+    Console.WriteLine(x);
+}
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+1
+2
+3
+4
+5
+7
+8
+9
+10
+
+{% endhighlight %}
+
+<p>The for loop will print all the x values on the console. When the loop meets with number 6, it will not print it on the console, it will skip the 6 and it will continue with 7.</p>
+<br>
+
+<p>There is another looping method is C# - <b>foreach</b>. We will address it right after we learn about arrays.</p>
