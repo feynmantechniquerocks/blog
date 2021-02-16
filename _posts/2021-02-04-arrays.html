@@ -1,0 +1,229 @@
+---
+layout: post
+title: "Arrays in C#"
+subtitle: "Learn how to store collections of objects."
+permalink: /arrays-in-csharp/
+date: 2021-02-04 23:45:13 -0400
+categories: ['c#', 'array', 'data structure', 'store', 'collection', 'list', 'foreach' ]
+---
+
+<p>Array is a data structure that allows us to store collections related objects with same type. If we didn't have arrays, we would need to have so many variables which could affect the readability.</b>
+</p>
+<br>
+
+<h1 class="title is-3">Creating Arrays</h1>
+
+<p>It's easy to create arrays. The process is very similar to create any type of variable.</b>
+</p>
+<br>
+
+{% highlight c# %}
+
+int[] grades; // An array is defined but not actually created.
+
+string[] names = new string[10]; // An array is defined and created.
+
+
+{% endhighlight %}
+
+
+<p>When we have paranthesis after the type, we tell the compiler this is not just a variable, it's an array.
+</p>
+<br>
+
+<p>Size of the array is defined after creation. The important thing is the size of the array can not be changed in the future. Members of the array can be changed but size can't.
+If you need it to be changeable then you need to use List data type instead of arrays.
+</p>
+<br>
+
+<p>Let's put data into our array. </b>
+</p>
+<br>
+
+{% highlight c# %}
+
+// Indexing is a way to populate an array with data. We also use indexing to get the element of an array.
+int[] grades = new int[5];
+grades[0] = 5;
+grades[1] = 69;
+grades[2] = 77;
+grades[3] = 97;
+grades[4] = 58;
+
+// Other ways to create an array.
+
+int[] scores = new int[5] { 15, 29, 78, 57, 100 };
+
+int[] points = new int[] { 15, 29, 78, 57, 100 };
+
+int[] votes = new [] { 15, 29, 78, 57, 100 };
+
+{% endhighlight %}
+
+
+<h1 class="title is-3">Some Array Operations</h1>
+
+<p>It's very common to get the minimum/maximum of an array or calculate the average of an array. Let's see how these are done in C#.</p> 
+<br>
+
+<p>To do the things above, we would need to know the length of the array. First let's see how to get the length of the array.</p>
+<br>
+
+<h1 class="title is-4">Array Length</h1>
+
+{% highlight c# %}
+
+// arrayName.Length used to get the length of an array.
+int[] points = new int[] { 15, 29, 78, 57, 100 };
+Console.WriteLine($"Length of the array is {points.Length}.");
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+Length of the array is 5.
+
+{% endhighlight %}
+
+<h1 class="title is-4">Minimum and Maximum of an Array</h1>
+
+<p>Let's find the minimum and maximum value of an array.</p>
+<br>
+
+{% highlight c# %}
+
+int[] points = new [] {  57, 100, 15, 29, 78, };
+
+// Find the minimum value of the array.
+
+int minimumValue = points[0]; // Initialize the value to the first element of the array.
+
+for (int i = 0; i < points.Length; i++)
+{
+    if (points[i] <= minimumValue)
+    {
+        minimumValue = points[i];
+    }
+}
+
+Console.WriteLine($"Minimum value of the points array is {minimumValue}.");
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+Maximum value of the points array is 100.
+
+{% endhighlight %}
+
+<hr>
+
+{% highlight c %}
+
+int[] points = new [] {  57, 100, 15, 29, 78, };
+
+// Find the maximum value of the array.
+
+int maximumValue = points[0]; // Initialize the value to the first element of the array.
+
+for (int i = 0; i < points.Length; i++)
+{
+    if (points[i] >= maximumValue)
+    {
+        maximumValue = points[i];
+    }
+}
+
+Console.WriteLine($"Maximum value of the points array is {maximumValue}.");
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+Maximum value of the points array is 100.
+
+{% endhighlight %}
+
+<h1 class="title is-4">Average of an Array</h1>
+
+<p>Let's find the average of the array.
+</p>
+<br>
+
+{% highlight c# %}
+
+int[] points = new [] {  57, 100, 15, 29, 78, };
+
+// Find the average value of the array.
+
+float average;
+int total = 0;
+
+for (int i = 0; i < points.Length; i++)
+{
+    total += points[i];
+}
+
+average = (float)total / points.Length;
+
+Console.WriteLine($"Average value of the points array is {average}.");
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+Average value of the points array is 55.8.
+
+{% endhighlight %}
+
+<h1 class="title is-3">Foreach Loop</h1>
+
+<p>As you've seen, we need to get the each element of an array most of the time. We can do it easily using the for loop. The thing is C# provides us a more simple way to access elements of an array - <b>foreach loop</b>.</p>
+<br>
+
+<p>Here is a simple example about foreach loop.</p>
+<br>
+
+
+{% highlight c# %}
+
+string[] names = new [] {  "John", "Jack", "Susan", "Boyle", "Alex" };
+
+// Let's print all the names on the console.
+
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+John
+Jack
+Susan
+Boyle
+Alex
+
+
+{% endhighlight %}
