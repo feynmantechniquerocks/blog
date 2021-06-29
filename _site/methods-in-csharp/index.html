@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Methods in C#</h1>
+
+            
+
+                <p>Programming is all about solving problems. In real life, one of the best way to solve a big problem is to break it down into smaller pieces. This method also applies programming problems.</b>
+    C# provides us methods to do so. Methods are also known as functions, subroutines and procedures in other programming languages.
+</p>
+<br>
+
+<p>Methods are one of the core parts of C#. In fact, we have been using them since the beginning. We always print some text on the console, right ? 
+    WriteLine is the name of the method and it belongs to Console class. We will talk about classes in the next posts.
+</p>
+<br>
+
+
+<h1 class="title is-3">Creating and Calling Methods</h1>
+
+<p>Let's create a method.</b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">static</span> <span class="k">void</span> <span class="nf">sayHello</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Greetings !"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+
+<p>That's it. We've just created our first method. It just prints <b>Greetings !</b> on the console. There are a few things to address at the moment.
+    <div class="content">
+        <ul>
+            <li><b>1. Static:</b> Let's skip this for now.</li>
+            <li><b>2. Void:</b> That means our method will not return anything. I will show you how to return something in a minute. </li>
+            <li><b>3. Method Name:</b> We have to name our method so we can call them later. Our method name is sayHello.</li>
+            <li><b>4. Paranthesis:</b> Parenthesis are for arguments. sayHello doesn't require any arguments.</li>
+        </ul>
+    </div>
+</p>
+
+<p>We have our sayHello method but we haven't called it yet. In order to make our method work, we need to call it in our main program.
+</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Methods</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+
+            <span class="nf">sayHello</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">sayHello</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Greetings !"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+
+<h1 class="title is-3">Return Something from a Method</h1>
+
+<p>We usually need methods to make some sort of calculations for us so we need methods to return something.</p>
+<br>
+
+<p>Here is an example:</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">namespace</span> <span class="nn">Method</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+
+            <span class="kt">int</span> <span class="n">myRandomNumber</span> <span class="p">=</span> <span class="nf">randomIntGenerator</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"My random number is: </span><span class="p">{</span><span class="n">myRandomNumber</span><span class="p">}</span><span class="s">."</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">static</span> <span class="kt">int</span> <span class="nf">randomIntGenerator</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="m">71</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Here you can see, we changed void with int. That tells the compiler our method will return an integer. We can assign the return value to a variable and then use it.</p>
+<br>
+
+<h1 class="title is-3">Method Arguments</h1>
+
+<p>Methods are supposed to be reusable so we need them to be used over and over again within different situations. That's why we need to give them arguments and return a value depends on the arguments provided.</p>
+<br>
+
+<p>We had a small program in the past to calculate the area of the given triangle. Let's write a method that calculates the area of a triangle. We will need the base and the height as the arguments.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+
+        <span class="kt">float</span> <span class="n">area</span> <span class="p">=</span> <span class="nf">areaCalculator</span><span class="p">(</span><span class="m">17.2f</span><span class="p">,</span> <span class="m">5.6f</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"Area of the given triangle is: </span><span class="p">{</span><span class="n">area</span><span class="p">}</span><span class="s">."</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">static</span> <span class="kt">float</span> <span class="nf">areaCalculator</span><span class="p">(</span><span class="kt">float</span> <span class="n">baseValue</span><span class="p">,</span> <span class="kt">float</span> <span class="n">height</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">float</span> <span class="n">area</span> <span class="p">=</span> <span class="p">(</span><span class="n">baseValue</span> <span class="p">*</span> <span class="n">height</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">area</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Area</span> <span class="n">of</span> <span class="n">the</span> <span class="n">given</span> <span class="n">triangle</span> <span class="n">is</span><span class="o">:</span> <span class="mi">48</span><span class="p">.</span><span class="mi">16</span><span class="p">.</span></code></pre></figure>
+
+<article class="message is-info">
+    <div class="message-body">
+        Methods that have different number of arguments can have the same name. This can be tricky !
+    </div>
+</article>
+
+<h1 class="title is-3">XML Comments</h1>
+
+<p>The last thing I'd like to address is XML Comments.</p>
+<p></p>
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/arrays-in-csharp/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/entity-framework/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/decision-making-in-csharp/">Decision making in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

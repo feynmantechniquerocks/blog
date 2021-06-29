@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">What is .NET Platform?</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="https://docs.microsoft.com/tr-tr/dotnet/standard/library-guidance/media/cross-platform-targeting/platforms-netstandard.png" alt=".NET Platform Components">
+                        <figcaption><small>Photo credit - docs.microsoft.com</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>
+    <a href="https://feynmantechnique.rocks/i-decided-to-learn-csharp-in-2021/" target="blank">In the first post of this blog.</a> I mentioned that I’m going to learn C# in 2021. 
+</p>
+<br>
+
+<p>I got myself a book, I decided which Youtube tutorials should I take, <a href="https://feynmantechnique.rocks/how-to-download-visual-studio/">I downloaded the Visual Studio</a> and started to study C#.</p>
+<br>
+
+<p>At the very first minute, I faced with a new term <b>“.NET Platform”</b>. Actually, this was not my first time hearing about <b>“.NET Platform”</b> but I didn’t know what this term was. I assume many learners and maybe some C# developers  still don’t know what it is. This is why I wanted to write about it before diving in the syntax, data types, OOP etc.</p>
+<br>
+<p>
+    <b>“.NET Platform”</b> literally is a platform that consists of many different components and it is the platform that our C# applications run on. It's free, open source and cross-platform. It helps developers to build all kind of applications. <b>“.NET Platform”</b> can be thought of as three layers. 
+    <div class="content">
+        <ul>
+            <li>
+                Common Infrastructure
+            </li>
+            <li>
+                .NET Standard Library
+            </li>
+            <li>
+                App Models
+            </li>
+        </ul>
+    </div>
+</p>
+<br>
+
+
+
+<h1 class="title is-3">1. Common Infrastructure </h1>
+
+<p>
+    This layer consists of programming languages and compilers, Common language Runtime (CLR), Common intermediate language (CIL) and other tools that are necessary to run your programs.
+</p>
+<br>
+
+<p>
+    I mentioned about the programming language<b>s</b>. That’s right - plural. You can use not only C# but also F# and Visual Basic to build applications that run on <b>“.NET Platform”</b>. 
+</p>
+<br>
+
+<p>
+    Here is the code execution process that will make things easier to understand:
+    <div class="content">
+        <ol type="1">
+            <li>The program will be converted to Common Intermediate Language by the compiler. .Net framework has compilers for all the supported programming languages. These compilers will help us to translate the program to CIL.</li>
+            <li>To execute the compiled code on a real computer, Common Language Runtime (CLR) which has JIT(just-in-time) compiler will translate the CIL to native code.</li>
+            <li>A real computer will run this native code. </li>
+        </ol>
+    </div>
+</p>
+
+<p>
+    Thanks to <b>.NET Platform</b>, we don’t need to worry about the computers, operating system etc.
+</p>
+<br>
+
+<h1 class="title is-3">2. .NET Standard Library</h1>
+
+<p>
+    Also known as Base Class Library. This library has vast amount of code that can be used in NET Applications. 
+</p>
+<br>
+
+<p>
+    Many programs requires primitives, collections, file system interactions, IO, Networking, threading and much more. .NET Standard Library provide us many tools to deal with them thus shorten the development time.
+</p>
+<br>
+
+<h1 class="title is-3">3. App Models</h1>
+
+<p>
+    App model is a library for creating specific applications. App model was built on top of .Net Standard Library. They can be thought of as high level libraries that focus on solving specific problems for a specific application development. Here are some examples: 
+    <div class="content">
+        <ul>
+            <li>Web App model> ASP.NET</li>
+            <li>GUI App model > WPF or Windows Forms, UWP</li>
+            <li>Mobile App model > Xamarin</li>
+            <li>Game Development model > Unity</li>
+        </ul>
+    </div>
+</p>
+
+<p>
+    Once you learn one of the languages of <b>.NET Platform</b>, you can specifically focus on the app model library that you’d need. For example, If you’re going to work on the web, there is no point learning Xamarin. 
+</p>
+<br>
+
+<p>If you check the main image at the top, you’d see three stacks of <b>.NET Platform</b>. I think it’d be nice to mention about them too. 
+    <div class="content">
+        <ul>
+            <li><b>The .NET Framework</b>  is the oldest and most popular. It runs on Windows devices.</li>
+            <li><b>The .NET Core</b>  is the newest and it’s cross-platform.</li>
+            <li><b>The Xamarin</b>  aims at mobile devices (iOS and Android). </li>
+        </ul>
+    </div>
+</p>
+<br>
+
+<h1 class="title is-3">Conclusion</h1>
+
+<p>Basically, <b>.NET Platform</b> is a developer platform which consists programming languages and libraries. </p>
+<br>
+<p>Told you. It’s simple. 
+</p>
+<br>
+
+
+
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/i-decided-to-learn-csharp-in-2021/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/how-to-download-visual-studio/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Decision making in C#</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="https://d1sjtleuqoc1be.cloudfront.net/wp-content/uploads/2017/10/23215501/Untitled-design-4-860x574.jpg" alt="A boy trying to make a decision on the path">
+                        <figcaption><small>Photo credit - translatemedia.com</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>Every program needs to make decisions at some point. These decisions are made based on the condition of a variable.</b>
+</p>
+<br>
+
+<h1 class="title is-3">If/Else/Else if Statement</h1>
+
+<p>We often use <b>if</b> statement (and some other form of it.) to make a decision in C#. Let's write a program that asks for the user's age. If the user is 18 or older, the user will be eligible to get a driving licence.</b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Please enter your age: "</span><span class="p">);</span>
+<span class="kt">string</span> <span class="n">ageAsString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">age</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">ageAsString</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="p">&gt;=</span> <span class="m">18</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//This code block will be executed if the condition is true.</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"You are eligible to have a driving licence."</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>As you can see above, it's very easy to make a decision in C# using if statement. After if statement we have a parantheses that holds the condition variable.
+    If the condition evaluates true then the compiler will execute the code in curly braces, if it evaluates false it will skip the code block in curly braces and move on.
+</p>
+<br>
+
+<p>Let's update the code above add the else and else if.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Please enter your age: "</span><span class="p">);</span>
+<span class="kt">string</span> <span class="n">ageAsString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+<span class="kt">int</span> <span class="n">age</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">ageAsString</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="p">&gt;=</span> <span class="m">18</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">//This code block will be executed if the condition is true.</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"You are eligible to have a driving licence."</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">age</span> <span class="p">&lt;</span> <span class="m">18</span><span class="p">){</span>
+    <span class="c1">//This code block will be executed if the condition is true</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Sorry! You can't have a driving licence."</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="c1">//This code block will be executed if none of the above is true</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Are you sure you've entered a valid number ?"</span><span class="p">);</span></code></pre></figure>
+
+
+<p>We don't know whether the condition will be true or false. We can make decisions for both options using else and elseif.</p>
+<br>
+
+<article class="message is-info">
+    <div class="message-body">
+        If there is only one statement, there is no need to use curly braces.
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="p">&gt;=</span> <span class="m">18</span><span class="p">)</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"You are eligible to have a driving licence."</span><span class="p">);</span>
+<span class="k">else</span> 
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Sorry! You can't have a driving licence."</span><span class="p">);</span></code></pre></figure>
+    </div>
+</article>
+
+<h1 class="title is-3">Relational Operators</h1>
+
+<p>Most of the time we make comparions to have a conditional variables. We use relational operators to compare two operands. 
+There are 6 relational operators.
+<div class="content">
+    <ul>
+        <li> <b>==</b>: Checks if the two operands are equal.</li>
+        <li> <b>!=</b>: Checks if the two operands are not equal.</li>
+        <li> <b><</b>: Checks if the two left side operand is smaller than the right side operand.</li>
+        <li> <b>></b>: Checks if the two left side operand is greater than the right side operand.</li>
+        <li> <b><=</b>: Checks if the two left side operand is smaller than or equal to the right side operand.</li>
+        <li> <b>>=</b>: Checks if the two left side operand is greater than or equal to the right side operand.</li>
+    </ul>
+</div>
+</p>
+<br>
+
+<h1 class="title is-3">Bools in Decision Making</h1>
+
+<p>It's very common to use bools in decision making. This is valid for all programming languages. Here is an example.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">speedLimit</span> <span class="p">=</span> <span class="m">120</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"What is your speed ?"</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">yourSpeed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">());</span>
+
+<span class="kt">bool</span> <span class="n">isAllowed</span> <span class="p">=</span> <span class="n">yourSpeed</span> <span class="p">&lt;=</span> <span class="n">speedLimit</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">isAllowed</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Your speed is allowed on this road."</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Your too fast. Slowdown !"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<article class="message is-info">
+    <div class="message-body">
+        As you can see above, relational operators return a bool value so they can be used in a way I used above. 
+    </div>
+</article>
+
+<p>It's also possible to logical opposite of a bool in decision making. Using <b>! operator.</b> </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">ageLimit</span> <span class="p">=</span> <span class="m">21</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"What is your age ?"</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">yourAge</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">());</span>
+
+<span class="kt">bool</span> <span class="n">isAllowed</span> <span class="p">=</span> <span class="p">(</span><span class="n">yourAge</span> <span class="p">&gt;=</span> <span class="n">ageLimit</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(!</span><span class="n">isAllowed</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"You can't enter the bar."</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"What do you want to drink ?"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h1 class="title is-3">Logical Operators (AND and OR)</h1>
+
+<p>These are the logical equivalent of AND and OR operators.
+    <div class="content">
+        <ul>
+            <li> <b>AND Operator:</b> If the all operands are True, the condition will be True.  </li>
+            <li> <b>OR Operator:</b> If any of the operands is True, the condition will be True.  </li>
+        </ul>
+    </div>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// AND Operator.</span>
+<span class="kt">int</span> <span class="n">age</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">salary</span> <span class="p">=</span> <span class="m">5000</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="p">&gt;=</span> <span class="m">20</span> <span class="p">&amp;&amp;</span> <span class="n">salary</span> <span class="p">&gt;</span> <span class="m">2000</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Both are true so this block will be executed.</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"You're welcome to the club"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// OR Operator.</span>
+<span class="kt">int</span> <span class="n">year</span> <span class="p">=</span> <span class="m">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">km</span> <span class="p">=</span> <span class="m">120000</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">year</span> <span class="p">&gt;</span> <span class="m">3</span> <span class="p">||</span> <span class="n">km</span> <span class="p">&gt;</span> <span class="m">150000</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Only one of them is True but it's enough to execute this block.</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"We need to replace your car."</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h1 class="title is-3">Ternary Operator</h1>
+
+<p>Ternary operators work on three operands unlike unary operators or binary operators. Ternary operator is also called the conditional operator and it works like if-else statement.</p>
+<br>
+
+<p>The way of using ternary operator is like: </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="p">(</span><span class="n">condition</span> <span class="k">as</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">?</span> <span class="nf">Value</span><span class="p">(</span><span class="k">if</span> <span class="k">true</span><span class="p">)</span> <span class="p">:</span> <span class="nf">Value</span> <span class="p">(</span><span class="k">if</span> <span class="k">false</span><span class="p">)</span></code></pre></figure>
+
+<p>Here is an example:</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">grade</span> <span class="p">=</span> <span class="m">70</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">((</span><span class="n">grade</span><span class="p">&gt;</span><span class="m">65</span><span class="p">)</span> <span class="p">?</span> <span class="s">"You passed!"</span> <span class="p">:</span> <span class="s">"You failed!"</span><span class="p">);</span></code></pre></figure>
+
+<p>The output will be:</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">You</span> <span class="n">passed</span><span class="o">!</span></code></pre></figure>
+
+<p>Ternary operator is a one-liner so it's nice to know it but for me it reduces the readability so I wouldn't use it for most cases.</p>
+<br>
+
+<h1 class="title is-3">Switch Statement</h1>
+
+<p>The last statement in decision making I'd like to talk about is <b>Switch Statement</b>. Switch statement and If statement can be used interchangeably for most cases.
+Sometimes using one of them instead of the other can be more readable. </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">carChoice</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+
+<span class="k">switch</span> <span class="p">(</span><span class="n">carChoice</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">case</span> <span class="m">1</span><span class="p">:</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"BMW"</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="m">2</span><span class="p">:</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Mercedes"</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="m">3</span><span class="p">:</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Audio"</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="m">4</span><span class="p">:</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"WW"</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="m">5</span><span class="p">:</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Opel"</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="m">6</span><span class="p">:</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Fiat"</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The output will be: </p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">Mercedes</span> </code></pre></figure>
+
+<p>Switch statement doesn't allow logical operators as case condition. If this is the case, we could only use if statement not switch.</p>
+<br>
+
+<article class="message is-info">
+    <div class="message-body">
+        <b>break</b> should be used for every case unlike C++ and Java. Otherwise the compiler will raise an error. 
+    </div>
+</article>
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/more-math/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/looping-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

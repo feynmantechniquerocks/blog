@@ -1,0 +1,159 @@
+---
+layout: post
+title: "Methods in C#"
+subtitle: "Learn how to break your program down into smaller pieces."
+permalink: /methods-in-csharp/
+date: 2021-02-04 23:45:13 -0400
+categories: ['c#', 'method', 'function', 'return', 'OOP', 'dot', 'dot operator', 'subroutine', 'procedure', 'functional' ]
+---
+
+<p>Programming is all about solving problems. In real life, one of the best way to solve a big problem is to break it down into smaller pieces. This method also applies programming problems.</b>
+    C# provides us methods to do so. Methods are also known as functions, subroutines and procedures in other programming languages.
+</p>
+<br>
+
+<p>Methods are one of the core parts of C#. In fact, we have been using them since the beginning. We always print some text on the console, right ? 
+    WriteLine is the name of the method and it belongs to Console class. We will talk about classes in the next posts.
+</p>
+<br>
+
+
+<h1 class="title is-3">Creating and Calling Methods</h1>
+
+<p>Let's create a method.</b>
+</p>
+<br>
+
+{% highlight c# %}
+
+static void sayHello()
+{
+    Console.WriteLine("Greetings !");
+}
+
+{% endhighlight %}
+
+
+<p>That's it. We've just created our first method. It just prints <b>Greetings !</b> on the console. There are a few things to address at the moment.
+    <div class="content">
+        <ul>
+            <li><b>1. Static:</b> Let's skip this for now.</li>
+            <li><b>2. Void:</b> That means our method will not return anything. I will show you how to return something in a minute. </li>
+            <li><b>3. Method Name:</b> We have to name our method so we can call them later. Our method name is sayHello.</li>
+            <li><b>4. Paranthesis:</b> Parenthesis are for arguments. sayHello doesn't require any arguments.</li>
+        </ul>
+    </div>
+</p>
+
+<p>We have our sayHello method but we haven't called it yet. In order to make our method work, we need to call it in our main program.
+</p>
+
+{% highlight c# %}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Methods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            sayHello();
+        }
+
+        static void sayHello()
+        {
+            Console.WriteLine("Greetings !");
+        }
+    }
+}
+
+{% endhighlight %}
+
+
+<h1 class="title is-3">Return Something from a Method</h1>
+
+<p>We usually need methods to make some sort of calculations for us so we need methods to return something.</p>
+<br>
+
+<p>Here is an example:</p>
+<br>
+
+{% highlight c# %}
+
+namespace Method
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int myRandomNumber = randomIntGenerator();
+            Console.WriteLine($"My random number is: {myRandomNumber}.");
+        }
+
+        static int randomIntGenerator()
+        {
+            return 71;
+        }
+    }
+}
+
+{% endhighlight %}
+
+<p>Here you can see, we changed void with int. That tells the compiler our method will return an integer. We can assign the return value to a variable and then use it.</p>
+<br>
+
+<h1 class="title is-3">Method Arguments</h1>
+
+<p>Methods are supposed to be reusable so we need them to be used over and over again within different situations. That's why we need to give them arguments and return a value depends on the arguments provided.</p>
+<br>
+
+<p>We had a small program in the past to calculate the area of the given triangle. Let's write a method that calculates the area of a triangle. We will need the base and the height as the arguments.</p>
+
+{% highlight c# %}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+        float area = areaCalculator(17.2f, 5.6f);
+        Console.WriteLine($"Area of the given triangle is: {area}.");
+        Console.ReadLine();
+    }
+
+    static float areaCalculator(float baseValue, float height)
+    {
+        float area = (baseValue * height) / 2;
+        return area;
+    }
+}
+
+{% endhighlight %}
+
+<p>The output will be: </b>
+</p>
+<br>
+
+{% highlight c %}
+
+Area of the given triangle is: 48.16.
+
+{% endhighlight %}
+
+<article class="message is-info">
+    <div class="message-body">
+        Methods that have different number of arguments can have the same name. This can be tricky !
+    </div>
+</article>
+
+<h1 class="title is-3">XML Comments</h1>
+
+<p>The last thing I'd like to address is XML Comments.</p>
+<p></p>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Hello World in C#</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="/assets/images/hello-world.jpg" alt="An iPhone with hello message on a table">
+                        <figcaption><small>Photo credit - Tyler Lastovich</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p><a href="https://feynmantechnique.rocks/how-to-download-visual-studio/">We downloaded and installed the Visual Studio</a> and now we are good to go ! Let’s write our first C# program. It’s obvious, it will be another <b>Hello World</b> program. 
+</p>
+<br>
+
+<p>Our program will simply print the things we want on the console.
+</p>
+<br>
+
+<p>Some think <b>Hello World</b> programs are useless and waste of time but I respectfully disagree with those people. A simple <b>Hello World</b> program shows us whether our programming environment setup is correct or not. 
+</p>
+<br>
+
+<p>Let’s get started.</p>
+<br>
+
+<h1 class="title is-3">1. Create a New Project</h1>
+
+<p>Go ahead and start Visual Studio. You’ll see a window similar to below.</p>
+<br>
+
+<p>Click on the Create a new project button.</p>
+<br>
+
+<div class="box">
+    <figure class="image is-text-centered">
+        <img src="../assets/images/create-new-project.png" >
+        <figcaption><small>Create New Project Dialog</small></figcaption>
+    </figure>
+</div>
+<br>
+
+<p>Visual Studio has many project templates. You should choose one accordingly. For us, we need to choose Console App(.NET Framework). </p>
+<br>
+
+<p>If you take a look at the figure below, you’ll see that I’ve used the filters to find the project template. You can either use filters or search bar to find what you’re looking for.</p>
+<br>
+
+<div class="box">
+    <figure class="image is-text-centered">
+        <img src="../assets/images/choose-project-type.png" >
+        <figcaption><small>Choose Project Type</small></figcaption>
+    </figure>
+</div>
+<br>
+
+<article class="message is-danger">
+    <div class="message-body">
+        We are going to run our console app on the Windows. If you’re on Mac or Linux, you need to choose Console App (.NET Core)
+    </div>
+</article>
+<br>
+
+<article class="message is-info">
+    <div class="message-body">
+        If you can’t find the tools and features you’re looking for, go ahead and start Visual Studio installer and download/install the tools and features. Then they will appear on this dialog.
+    </div>
+</article>
+<br>
+
+<p>Click on the Next button and new-project-wizard will take you to configuration page. You’ll give your project a name, choose its location and which .NET Framework version to use. </p>
+<br>
+
+<p>Make sure to give your project a good name so you can find it easily later.</p>
+<br>
+
+<div class="box">
+    <figure class="image is-text-centered">
+        <img src="../assets/images/configure-project.png" >
+        <figcaption><small>Configure your project.</small></figcaption>
+    </figure>
+</div>
+<br>
+
+<p>Click on the create button and let Visual Studio do its work.</p>
+<br>
+
+<h1 class="title is-3">2. A Brief Tour of Visual Studio</h1>
+
+<p>You should be seeing something similar below.</p>
+<br>
+
+<p>We have our source code (Program.cs).</p>
+<br>
+
+<p>We have solution explorer where we can see the outline of the files needed to run our program. </p>
+<br>
+
+<p>There are many other windows but they are not necessary to mention at this point. We’ll get to them when it’s necessary.</p>
+<br>
+
+<div class="box">
+    <figure class="image is-text-centered">
+        <img src="../assets/images/brief-tour-of-visual-studio.png" >
+        <figcaption><small>An overview of Visual Studio</small></figcaption>
+    </figure>
+</div>
+<br>
+
+<h1 class="title is-3">3. Project, Assembly and Solution</h1>
+
+<p>
+    Project, Assembly and Solution. These are the terms we would face frequently so it’s worth to mention:
+    <div class="content">
+        <ul>
+            <li><strong>Project:</strong> Combination of source code and all the other resources to make an executable program.</li>
+            <li><strong>Assembly:</strong> What we get after project has been compiled. It could be an EXE file or DLL file.</li>
+            <li><strong>Solution:</strong> Project or projects to accomplish the given task. A solution could contain more than one project therefore it has information about how these projects will talk to each other as well. The solutions we are going to build in this blog will only have one project though.</li>
+        </ul>
+    </div>
+</p>
+
+<h1 class="title is-3">4. Let’s Write the Hello World Program</h1>
+
+<p>Modify the source code as shown below.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Hello_World</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And that’s it. We completed our first C# program. Easy, right ? </p>
+<br>
+
+<p>Now, let’s run it. 
+</p>
+<br>
+
+<p>To run a program either click on the Start button on the toolbar or press F5.
+</p>
+<br>
+
+<p>There you go ! Did you see it ? Your program flashed for one second and disappeared.  </p>
+<br>
+
+<p>Actually, your program worked as expected. It started, printed the text <b>Hello World</b> and closed. It happened so q uick so you didn’t get the chance to see it. 
+</p>
+<br>
+
+<p>Let’s modify the source code as shown below.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Hello_World</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>      
+
+<p>Now, run it again. This time your program will not disappear because we tell it to wait and read the keyboard input. This is a small trick that keeps the console open.</p>
+<br>
+
+<p>That's it. We've written our first C# program. I know it's nothing and it does nothing but it's a start.</p>
+<br>
+
+<p>Let's learn more !</p>
+<br>
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/how-to-download-visual-studio/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/how-to-make-comments-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

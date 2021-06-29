@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Looping in C#</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="https://cdn.pixabay.com/photo/2017/08/27/17/23/looping-2686892_960_720.jpg" alt="A roller coaster that looks like a loop.">
+                        <figcaption><small>Photo credit - tdahl from pixabay.com</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>Loops allow us to repeat same code block over and over again. It will make more sense once we learn about arrays and other data types.</b>
+</p>
+<br>
+
+<h1 class="title is-3">The While Loop</h1>
+
+<p>While loop is used to repeat same code block over and over again unless a certain condition is met.</b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">x</span><span class="p">++;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">10</span></code></pre></figure>
+
+
+<p>The value of x is equal to 1 at the beginning. The compiler will check the condition of the while loop first. X is smaller than 10 so the condition will be true.
+    The compiler will execute the code block inside curly braces. After the execution is done, the compiler will go back to the while loop again and it will repeat the process until it meets the condition (or we specifically tell the compiler to break the loop.).
+</p>
+<br>
+
+<h1 class="title is-3">The Do-While Loop</h1>
+
+<p>Do-While loop is another form of a while loop. The code block will be executed in while loop only if the condition is met. Sometimes the code block will be skipped.
+    Do-While on the otherhand is a bit different. It executes the code block first then it checks the condition. If it is met, the code block will be executed again. </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">guess</span> <span class="p">=</span> <span class="m">7</span><span class="p">;</span>
+<span class="k">do</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Let's try to guess the number I choosed."</span><span class="p">);</span>
+    <span class="kt">string</span> <span class="n">numAsString</span> <span class="p">=</span> <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+    <span class="n">num</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="nf">ToInt32</span><span class="p">(</span><span class="n">numAsString</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="p">!=</span> <span class="n">guess</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Try again !"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="p">!=</span> <span class="n">guess</span><span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"That's correct. It was 7"</span><span class="p">);</span></code></pre></figure>
+
+
+<p>Here is a basic number-guesser program using do-while loop. This can be done without using a do-while loop of course but I think it's good example.
+</p>
+<br>
+
+<h1 class="title is-3">The For Loop</h1>
+
+<p>The last loop is <b>the for loop.</b> It's one of the most used ones in programming. It can do all the job a while loop does. Usually we use it to go through elements of an array and do something with it.</p> 
+<br>
+
+<p>Here is the same example we did with while loop:</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">=</span><span class="m">1</span><span class="p">;</span> <span class="n">x</span><span class="p">&lt;=</span><span class="m">10</span><span class="p">;</span> <span class="n">x</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">10</span></code></pre></figure>
+
+<h1 class="title is-3">Break out of a Loop</h1>
+
+<p><b>Break</b> statement is used to break out of a loop. If you don't want to continue to the loop for any reason then we can break out of it using the break statement.</p>
+<br>
+
+<p>Let's do the number-guesser program again using break.
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">num</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">num</span><span class="p">++;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="p">==</span> <span class="m">8</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"I found the 8. Breaking out of the loop."</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"This is {0}. I'm looking for 8. "</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hey! I'm out of the loop."</span><span class="p">);</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">This</span> <span class="n">is</span> <span class="mi">1</span><span class="p">.</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">looking</span> <span class="k">for</span> <span class="mi">8</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">is</span> <span class="mi">2</span><span class="p">.</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">looking</span> <span class="k">for</span> <span class="mi">8</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">is</span> <span class="mi">3</span><span class="p">.</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">looking</span> <span class="k">for</span> <span class="mi">8</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">is</span> <span class="mi">4</span><span class="p">.</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">looking</span> <span class="k">for</span> <span class="mi">8</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">is</span> <span class="mi">5</span><span class="p">.</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">looking</span> <span class="k">for</span> <span class="mi">8</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">is</span> <span class="mi">6</span><span class="p">.</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">looking</span> <span class="k">for</span> <span class="mi">8</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">is</span> <span class="mi">7</span><span class="p">.</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">looking</span> <span class="k">for</span> <span class="mi">8</span><span class="p">.</span>
+<span class="n">I</span> <span class="n">found</span> <span class="n">the</span> <span class="mi">8</span><span class="p">.</span> <span class="n">Breaking</span> <span class="n">out</span> <span class="n">of</span> <span class="n">the</span> <span class="n">loop</span><span class="p">.</span>
+<span class="n">Hey</span><span class="o">!</span> <span class="n">I</span><span class="err">'</span><span class="n">m</span> <span class="n">out</span> <span class="n">of</span> <span class="n">the</span> <span class="n">loop</span><span class="p">.</span></code></pre></figure>
+
+
+<h1 class="title is-3">Continue to the Next Iteration</h1>
+
+<p>Break statement would break out of the loop but we sometimes need to just skip a particular value and continue with the next iteration.
+    We use <b>continue</b> statement to do that.
+</p>
+<br>
+
+<p>Here is an example: </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">x</span> <span class="p">&lt;=</span> <span class="m">10</span><span class="p">;</span> <span class="n">x</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">==</span> <span class="m">6</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">10</span></code></pre></figure>
+
+<p>The for loop will print all the x values on the console. When the loop meets with number 6, it will not print it on the console, it will skip the 6 and it will continue with 7.</p>
+<br>
+
+<p>There is another looping method is C# - <b>foreach</b>. We will address it right after we learn about arrays.</p>
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/decision-making-in-csharp/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/arrays-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/decision-making-in-csharp/">Decision making in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+---
+layout: post
+title: "Let's Dive into Entity Framework"
+subtitle: "Learn how to store data in a database using Entity Framework."
+permalink: /entity-framework/
+date: 2021-06-12 23:45:13 -0400
+main_image_src: "https://www.openlogic.com/sites/openlogic/files/image/2020-07/image-blog-sql-database.jpg"
+main_image_caption: "Photo credit - openlogic.com"
+main_image_alt: "A computer that looks like a drawer which represents a database."
+categories: ['c#', 'database', 'Entity Framework', 'entity', 'framework', 'code first', 'database first', 'model first', 'CRUD']
+---
+
+<p>You'll need to store data at some point of your application. When you do, you'll need to use a persistence database framework. You could write it on your own or you could
+    use an existing one. If you're a beginner developer like me, why would you bother yourself re-inventing the wheel. Just use what is best out there. The best database framework for C# is <strong>Entity Framework</strong>.
+</p>
+<br>
+
+<p>Thanks to Entity Framework, we no longer need to manage database connections, manual mapping, stored procedures and things like those. Entity Framework would take care all of them for us.
+</p>
+<br>
+
+
+<h1 class="title is-3">Different Approaches in Entity Framework</h1>
+
+<p>There are three approaches in Entity Framework.
+    <div class="content">
+        <ul>
+            <li><b>Code First Approach:</b> We create our domain classes and Entity Framework generates the data tables accordingly.</li>
+            <li><b>Database First Approach:</b> We create our data tables and Entity Framework generates the domain classess accordingly.</li>
+            <li><b>Model First Approach:</b> We create models and their assosications and Entity Framework generates the data tables and domain classes accordingly.</li>
+        </ul>
+    </div>
+</p>
+
+<p>If you developed some applications using Django Framework. You'd knew about the code first approach. I'm familiar with the code first concept so I'd stick to it. If you'd like to learn more about other
+    approaches, there are many resources online. For the rest of the post, I'll talk about the code first approach.
+</p>
+<br>
+
+<h1 class="title is-3">Create Domain Class</h1>
+
+<p>Let's create a simple contact management app. Let's make it console application for now. Go ahead and create the project.
+</p>
+<br>
+
+<p>Once you created the project, go ahead and and create a folder named Models. Later, add Contact.cs class to that folder. Final folder structure should be as follow:
+</p>
+<br>
+
+<div class="box">
+    <figure class="image is-text-centered">
+        <img src="../assets/images/project-structure.png" width="334" height="119">
+        <figcaption><small>Project Structure</small></figcaption>
+    </figure>
+</div>
+<br>
+
+<p>Let's modify the Contact.cs file as follow.
+</p>
+<br>
+
+{% highlight c# %}
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ContactManagement.Models
+{
+    public class Contact
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string CompanyName { get; set; }
+        public string Website { get; set; }
+    }
+}
+
+{% endhighlight %}
+
+<p>As you can see, we have all the properties that we want in our database. Since we're using code first approach, Entity Framework will help us to convert these properties into database columns.
+</p>
+<br>
+
+<h1 class="title is-3">Create Entity Framework Project</h1>
+
+<p> I've been looking at Entity Framework codes on Github and I believe the best approach is to seperate the domain classes and Entity Framework setup than each other. That's why I'm going to create a new project just for Entity Framework
+    setup.
+</p>
+<br>
+
+<p> Once we created our ContactManagement.EntityFramework project - which is a Class Library (.Net Core) - we need to install Entity Framework as dependency.
+    We need to follow below steps to do so.
+    <div class="content">
+        <ul>
+            <li>Right click on the Dependencies under the project and click on the Manage Nuget Packages.</li>
+            <li>Go ahead and Browse the available packages and search for Entity Framework Core.</li>
+            <li>Select the package with the name Microsoft.EntityFrameworkCore and install the latest version.</li>
+        </ul>
+    </div>
+</p>
+
+<article class="message is-warning">
+    <div class="message-body">
+        There are two versions of Entity Framework. One is EntityFramework and the other one is EntityFrameworkCore. Since we're working on .Net Core, we installed EntityFrameworkCore.
+        If you are working on .Net Framework than you need to install EntityFramework otherwise you'll get errors.
+    </div>
+</article>
+
+<p> Let's add a new class named ContactManagementDbContext and modify it as follow.
+</p>
+<br>
+
+{% highlight c# %}
+
+using ContactManagement.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ContactManagement.EntityFramework
+{
+    public class ContactManagementDbContext : DbContext
+    {
+        public DbSet<Contact> Contacts { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=ContactManagementDB;Trusted_Connection=True;");
+
+            base.OnConfiguring(optionsBuilder);
+        }
+    }
+}
+
+{% endhighlight %}
+
+<article class="message is-danger">
+    <div class="message-body">
+        The above code uses .UseSqlServer method. To be able to use it you have to install EntityFrameworkCore.SqlServer package through Nuget Package Manager.
+    </div>
+</article>
+
+<p> We need EntityFrameworkCore.Tools package to make the migrations so go ahead and install it as well.
+</p>
+<br>
+
+<p> Once you installed the EntityFrameworkCore.Tools package, you're good to go. Let's open the package manager console and create the initial migration by typing <strong>add-migration initial</strong>.
+    I'd like to name my first migrations as initial. You can choose whatever the name you'd like.
+</p>
+<br>
+
+<p> If you were able to add the migrations then you should update the database by typing <strong>update-database</strong> on the package manager console. If you run this code
+    for the first time it'll create the database for you. Go ahead and check your database, you'll see the Contact table as expected.
+</p>
+<br>
+
+<article class="message is-warning">
+    <div class="message-body">
+        If your connection string in ContactManagementDbContext.cs was incorrect, <strong>update-database</strong> command wouldn't run. You can always check your connection string through View > SQL Server Object Explorer. 
+    </div>
+</article>
+
+<h1 class="title is-3">Conclusion</h1>
+
+<p> We created a sample solution. We created a project for the domain class and another one for the Entity Framework setup. I'll create data services to demonstrate CRUD operations in the next posts. 
+</p>
+<br>

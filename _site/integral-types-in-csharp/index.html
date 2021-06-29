@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Integral types in C#</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="/assets/images/integral-types.jpg" alt="numbers, a glass and an open notebook">
+                        <figcaption><small>Photo credit - Black ice on pexels.com</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>In this post, I'm going to discuss about integral data types which are <b>byte, short, int, long, sbyte,ushort, uint, ulong </b> and <b>char</b>
+</p>
+<br>
+
+<p>We use integral types (sometimes referred as integer types) to store numeric values.
+</p>
+<br>
+
+<h1 class="title is-3">Byte</h1>
+
+<p>Let's start with byte.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a byte variable.</span>
+<span class="kt">byte</span> <span class="n">myByteVar</span> <span class="p">=</span> <span class="m">2</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a byte can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">byte</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">byte</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">255</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">0</span></code></pre></figure>
+
+<p>Byte type stores 8-bit unsigned(I'll get to that later) int from 0 to 255.</p>
+<br>
+
+<h1 class="title is-3">Short</h1>
+
+<p>Let's continue with short.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a short variable.</span>
+<span class="kt">short</span> <span class="n">myShortVar</span> <span class="p">=</span> <span class="m">23</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a short can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">short</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">short</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">32767</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="o">-</span><span class="mi">32768</span></code></pre></figure>
+
+<p>Short type stores 16-bit signed int from -32768 to 32767. If you are coming from hardware background. You'll see this is a WORD.</p>
+<br>
+
+<h1 class="title is-3">Integer</h1>
+
+<p>Let's continue with integer. Int data type could be the most used one. I'll get to why later.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a integer variable.</span>
+<span class="kt">int</span> <span class="n">myIntVar</span> <span class="p">=</span> <span class="m">58</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value an integer can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">int</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">int</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">2147483647</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="o">-</span><span class="mi">2147483648</span></code></pre></figure>
+
+<p>Integer type stores 32-bit signed int from -2147483648 to 2147483647. If you are coming from hardware background. You'll see this is a double word (DWORD).</p>
+<br>
+
+<h1 class="title is-3">Long</h1>
+
+<p>If you have so much to store, long type is the way to go.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a long variable.</span>
+<span class="kt">long</span> <span class="n">myLongVar</span> <span class="p">=</span> <span class="m">58</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value an long can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">long</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">long</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">9223372036854775807</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="o">-</span><span class="mi">9223372036854775808</span></code></pre></figure>
+
+<p>Long type stores 32-bit signed int from -9223372036854775808 to 9223372036854775807. This is huge.</p>
+<br>
+
+<h1 class="title is-3">Signed/Unsigned Types</h1>
+
+<p>If a type is signed, it means it can be positive or negative. If a type is unsigned, it means it can be only positive. This would allow us to go twice as high but of course there is a downside, we can't use negative values.</p>
+<br>
+
+<p>We've covered short, int, and long types. If you check their ranges you'll see that they can be positive and negative. That means they are signed types. Byte on the other hand can store value between 0-255. That means it is unsigned type.</p>
+<br>
+
+<p>All these types also have unsigned counterparts. (Signed counterpart for byte). Let's learn about them as well.</p>
+<br>
+
+<h1 class="title is-3">sByte</h1>
+
+<p>This is signed version of the byte type.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a sbyte variable.</span>
+<span class="kt">sbyte</span> <span class="n">mysByteVar</span> <span class="p">=</span> <span class="p">-</span><span class="m">10</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value an sbyte can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">sbyte</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">sbyte</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">127</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="o">-</span><span class="mi">128</span></code></pre></figure>
+
+<p>sByte type stores 8-bit signed int from -128 to 127.</p>
+<br>
+
+<h1 class="title is-3">uShort</h1>
+
+<p>This is unsigned version of the short type.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a ushort variable.</span>
+<span class="kt">ushort</span> <span class="n">mysByteVar</span> <span class="p">=</span> <span class="m">280</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a ushort can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">ushort</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">ushort</span><span class="p">.</span><span class="n">MinValue</span><span class="p">)</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">65535</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">0</span></code></pre></figure>
+
+<p>sByte type stores 16-bit unsigned int from 0 to 65535.</p>
+<br>
+
+<h1 class="title is-3">uInteger</h1>
+
+<p>This is unsigned version of the integer type.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a uint variable.</span>
+<span class="kt">uint</span> <span class="n">myuIntVar</span> <span class="p">=</span> <span class="m">280</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a uint can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">uint</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">uint</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">4294967295</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">0</span></code></pre></figure>
+
+<p>uInt type stores 32-bit unsigned int from 0 to 4294967295.</p>
+<br>
+
+
+<h1 class="title is-3">uLong</h1>
+
+<p>This is unsigned version of the long type.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a ulong variable.</span>
+<span class="kt">ulong</span> <span class="n">myuLongVar</span> <span class="p">=</span> <span class="m">280</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a ulong can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span><span class="p">,</span> <span class="kt">ulong</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min. Value: {0}"</span><span class="p">,</span> <span class="kt">ulong</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">18446744073709551615</span>
+<span class="n">Min</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">0</span></code></pre></figure>
+
+<p>uLong type stores 64-bit unsigned int from 0 to 18446744073709551615.</p>
+<br>
+
+
+<h1 class="title is-3">Char</h1>
+
+<p>We are almost done with integral types. We only have one more to discuss about. It's Char type. It's used to store single character or a letter. You might think why we cover "char" as integral type since it's used to store characters.</p>
+<br>
+
+<p>It's because, under the hood, each char is assigned to a single number. When we use char, the computer will know we use it as a letter so it will treat char as letter not number. For example if you print char, the computer will print out the letter not the number.
+</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a char variable.</span>
+<span class="kt">char</span> <span class="n">myCharVar</span> <span class="p">=</span> <span class="sc">'c'</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">anotherCharVar</span> <span class="p">=</span> <span class="sc">'&amp;'</span><span class="p">;</span>
+
+<span class="c1">//Let's print the char variables on the console.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"myCharVar: {0}"</span> <span class="p">,</span> <span class="n">myCharVar</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"anotherCharVar: {0}"</span><span class="p">,</span> <span class="n">anotherCharVar</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="nl">myCharVar:</span> <span class="n">c</span>
+<span class="n">myCharVar</span><span class="o">:</span> <span class="o">&amp;</span></code></pre></figure>
+
+<p>char type stores 16-bit data. </p>
+<br>
+
+<h1 class="title is-3">How to Choose Which Data Type to Use ? </h1>
+
+<p>We have covered all the integral types of C#. It's clear when to use char type but not the others. To choose which data type to use, ask yourself following questions: 
+    <div class="content">
+        <ul>
+            <li>Are you going to need to store negative values ? If not, stick to unsigned types.</li>
+            <li>Do you know the maximum value that we would need ? If we know it then choose according to it.</li>
+        </ul>
+    </div>
+    <p>If you can't answer the questions above, just go with integer. It's not too big, not to small.</p>
+</p>
+<br>
+
+<h1 class="title is-3">Summary Table</h1>
+
+
+<p>Here is the table that gives some information about these integral data types.</p>
+<br>
+
+<div class="columns">
+    <div class="column">
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Byte Size</th>
+                    <th>Bit Size</th>
+                    <th>Range</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>byte</td>
+                    <td>1 byte</td>
+                    <td>8 bit</td>
+                    <td>0 to 255</td>
+                    </tr>
+                <tr>
+                    <td>short</td>
+                    <td>2 byte</td>
+                    <td>16 bit</td>
+                    <td>32,768 to 32,767</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>4 byte</td>
+                    <td>32 bit</td>
+                    <td>2,147,483,648 to 2,147,483,647</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>8 byte</td>
+                    <td>64 bit</td>
+                    <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                </tr>
+                <tr>
+                    <td>sbyte</td>
+                    <td>1 byte</td>
+                    <td>8 bit</td>
+                    <td>-128 to +127</td>
+                </tr>
+                <tr>
+                    <td>ushort</td>
+                    <td>2 byte</td>
+                    <td>16 bit</td>
+                    <td>0 to 65,535</td>
+                </tr>
+                <tr>
+                    <td>uint</td>
+                    <td>4 byte</td>
+                    <td>32 bit</td>
+                    <td>0 to 4,294,967,295</td>
+                </tr>
+                <tr>
+                    <td>ulong</td>
+                    <td>8 byte</td>
+                    <td>64 bit</td>
+                    <td>0 to 18,446,744,073,709,551,615</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>2 byte</td>
+                    <td>16 bit</td>
+                    <td>U+0000 to U+ffff</td>
+                </tr>
+            
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/variables-in-csharp/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/float-point-types-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

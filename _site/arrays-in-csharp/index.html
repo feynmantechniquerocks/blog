@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Arrays in C#</h1>
+
+            
+
+                <p>Array is a data structure that allows us to store collections related objects with same type. If we didn't have arrays, we would need to have so many variables which could affect the readability.</b>
+</p>
+<br>
+
+<h1 class="title is-3">Creating Arrays</h1>
+
+<p>It's easy to create arrays. The process is very similar to create any type of variable.</b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span><span class="p">[]</span> <span class="n">grades</span><span class="p">;</span> <span class="c1">// An array is defined but not actually created.</span>
+
+<span class="kt">string</span><span class="p">[]</span> <span class="n">names</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">string</span><span class="p">[</span><span class="m">10</span><span class="p">];</span> <span class="c1">// An array is defined and created.</span></code></pre></figure>
+
+
+<p>When we have paranthesis after the type, we tell the compiler this is not just a variable, it's an array.
+</p>
+<br>
+
+<p>Size of the array is defined after creation. The important thing is the size of the array can not be changed in the future. Members of the array can be changed but size can't.
+If you need it to be changeable then you need to use List data type instead of arrays.
+</p>
+<br>
+
+<p>Let's put data into our array. </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Indexing is a way to populate an array with data. We also use indexing to get the element of an array.</span>
+<span class="kt">int</span><span class="p">[]</span> <span class="n">grades</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">5</span><span class="p">];</span>
+<span class="n">grades</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="n">grades</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">=</span> <span class="m">69</span><span class="p">;</span>
+<span class="n">grades</span><span class="p">[</span><span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="m">77</span><span class="p">;</span>
+<span class="n">grades</span><span class="p">[</span><span class="m">3</span><span class="p">]</span> <span class="p">=</span> <span class="m">97</span><span class="p">;</span>
+<span class="n">grades</span><span class="p">[</span><span class="m">4</span><span class="p">]</span> <span class="p">=</span> <span class="m">58</span><span class="p">;</span>
+
+<span class="c1">// Other ways to create an array.</span>
+
+<span class="kt">int</span><span class="p">[]</span> <span class="n">scores</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="m">5</span><span class="p">]</span> <span class="p">{</span> <span class="m">15</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">78</span><span class="p">,</span> <span class="m">57</span><span class="p">,</span> <span class="m">100</span> <span class="p">};</span>
+
+<span class="kt">int</span><span class="p">[]</span> <span class="n">points</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span> <span class="m">15</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">78</span><span class="p">,</span> <span class="m">57</span><span class="p">,</span> <span class="m">100</span> <span class="p">};</span>
+
+<span class="kt">int</span><span class="p">[]</span> <span class="n">votes</span> <span class="p">=</span> <span class="k">new</span> <span class="p">[]</span> <span class="p">{</span> <span class="m">15</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">78</span><span class="p">,</span> <span class="m">57</span><span class="p">,</span> <span class="m">100</span> <span class="p">};</span></code></pre></figure>
+
+
+<h1 class="title is-3">Some Array Operations</h1>
+
+<p>It's very common to get the minimum/maximum of an array or calculate the average of an array. Let's see how these are done in C#.</p> 
+<br>
+
+<p>To do the things above, we would need to know the length of the array. First let's see how to get the length of the array.</p>
+<br>
+
+<h1 class="title is-4">Array Length</h1>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// arrayName.Length used to get the length of an array.</span>
+<span class="kt">int</span><span class="p">[]</span> <span class="n">points</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span> <span class="m">15</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">78</span><span class="p">,</span> <span class="m">57</span><span class="p">,</span> <span class="m">100</span> <span class="p">};</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"Length of the array is </span><span class="p">{</span><span class="n">points</span><span class="p">.</span><span class="n">Length</span><span class="p">}</span><span class="s">."</span><span class="p">);</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">array</span> <span class="n">is</span> <span class="mi">5</span><span class="p">.</span></code></pre></figure>
+
+<h1 class="title is-4">Minimum and Maximum of an Array</h1>
+
+<p>Let's find the minimum and maximum value of an array.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span><span class="p">[]</span> <span class="n">points</span> <span class="p">=</span> <span class="k">new</span> <span class="p">[]</span> <span class="p">{</span>  <span class="m">57</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">78</span><span class="p">,</span> <span class="p">};</span>
+
+<span class="c1">// Find the minimum value of the array.</span>
+
+<span class="kt">int</span> <span class="n">minimumValue</span> <span class="p">=</span> <span class="n">points</span><span class="p">[</span><span class="m">0</span><span class="p">];</span> <span class="c1">// Initialize the value to the first element of the array.</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">points</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="p">&lt;=</span> <span class="n">minimumValue</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">minimumValue</span> <span class="p">=</span> <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"Minimum value of the points array is </span><span class="p">{</span><span class="n">minimumValue</span><span class="p">}</span><span class="s">."</span><span class="p">);</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Maximum</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">points</span> <span class="n">array</span> <span class="n">is</span> <span class="mi">100</span><span class="p">.</span></code></pre></figure>
+
+<hr>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">int</span><span class="p">[]</span> <span class="n">points</span> <span class="o">=</span> <span class="n">new</span> <span class="p">[]</span> <span class="p">{</span>  <span class="mi">57</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="p">};</span>
+
+<span class="c1">// Find the maximum value of the array.</span>
+
+<span class="kt">int</span> <span class="n">maximumValue</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// Initialize the value to the first element of the array.</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">points</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">maximumValue</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">maximumValue</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">"Maximum value of the points array is {maximumValue}."</span><span class="p">);</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Maximum</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">points</span> <span class="n">array</span> <span class="n">is</span> <span class="mi">100</span><span class="p">.</span></code></pre></figure>
+
+<h1 class="title is-4">Average of an Array</h1>
+
+<p>Let's find the average of the array.
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span><span class="p">[]</span> <span class="n">points</span> <span class="p">=</span> <span class="k">new</span> <span class="p">[]</span> <span class="p">{</span>  <span class="m">57</span><span class="p">,</span> <span class="m">100</span><span class="p">,</span> <span class="m">15</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">78</span><span class="p">,</span> <span class="p">};</span>
+
+<span class="c1">// Find the average value of the array.</span>
+
+<span class="kt">float</span> <span class="n">average</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">total</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">points</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+<span class="p">{</span>
+    <span class="n">total</span> <span class="p">+=</span> <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="n">average</span> <span class="p">=</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">total</span> <span class="p">/</span> <span class="n">points</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"Average value of the points array is </span><span class="p">{</span><span class="n">average</span><span class="p">}</span><span class="s">."</span><span class="p">);</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Average</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">points</span> <span class="n">array</span> <span class="n">is</span> <span class="mi">55</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span></code></pre></figure>
+
+<h1 class="title is-3">Foreach Loop</h1>
+
+<p>As you've seen, we need to get the each element of an array most of the time. We can do it easily using the for loop. The thing is C# provides us a more simple way to access elements of an array - <b>foreach loop</b>.</p>
+<br>
+
+<p>Here is a simple example about foreach loop.</p>
+<br>
+
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">string</span><span class="p">[]</span> <span class="n">names</span> <span class="p">=</span> <span class="k">new</span> <span class="p">[]</span> <span class="p">{</span>  <span class="s">"John"</span><span class="p">,</span> <span class="s">"Jack"</span><span class="p">,</span> <span class="s">"Susan"</span><span class="p">,</span> <span class="s">"Boyle"</span><span class="p">,</span> <span class="s">"Alex"</span> <span class="p">};</span>
+
+<span class="c1">// Let's print all the names on the console.</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="kt">string</span> <span class="n">name</span> <span class="k">in</span> <span class="n">names</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The output will be: </b>
+</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">John</span>
+<span class="n">Jack</span>
+<span class="n">Susan</span>
+<span class="n">Boyle</span>
+<span class="n">Alex</span></code></pre></figure>
+
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/looping-in-csharp/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/methods-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/decision-making-in-csharp/">Decision making in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

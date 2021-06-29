@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Variables in C#</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="https://blogs.articulate.com/rapid-elearning/wp-content/uploads/sites/7/2016/01/variables.png" alt="Question marks in different colors.">
+                        <figcaption><small>Photo credit - articulate.com</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>In Math, a variable is an unknown number in an equation. In programming, a variable is a place in computer memory that holds the information regarding our programs.
+</p>
+<br>
+
+<p>Variables are important in programming because they let us store the information and refer back to it when necessary.
+</p>
+<br>
+
+<p>Every variable has a name and a type. Variable type shows what kind of data can be stored in it. Variable types are a huge deal in C#. It's a type-safe language.
+</p>
+<br>
+
+<h1 class="title is-3">How to Defines Variable in C#</h1>
+
+<p>Defining a variable is very simple and straightforward in C#. All you have to do is to give your variable a name and define its type.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">temperature</span><span class="p">;</span></code></pre></figure>
+
+<p>The one-line code above defines a variable named temperature and its type is an integer. We'll get to data types later.</p>
+<br>
+
+<h1 class="title is-3">Assigning Values to Variables in C#</h1>
+
+<p>Assigning values to variables in C# is also very simple and straightforward. Just use an equal operator ("=") and the value. </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">temperature</span> <span class="p">=</span> <span class="m">42</span><span class="p">;</span> <span class="c1">// If the variable is declared, no need to write its type.</span>
+
+<span class="kt">int</span> <span class="n">humidity</span> <span class="p">=</span> <span class="m">58</span><span class="p">;</span> <span class="c1">// Variable declaration and assigning can be done in the same line.</span></code></pre></figure>
+
+<h1 class="title is-3">Getting the Values of Variables in C#</h1>
+
+<p>If we need to get the value of a variable, we can just call the name of it to use its value. Let's see the complete code.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Text</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Threading.Tasks</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Hello_World</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// This is the first variable.</span>
+            <span class="kt">int</span> <span class="n">temperature</span><span class="p">;</span>
+
+            <span class="c1">// Let's assign a value to our variable.</span>
+            <span class="n">temperature</span> <span class="p">=</span> <span class="m">42</span><span class="p">;</span>
+
+            <span class="c1">// Here is another variable, declared and assigned in the same line.</span>
+            <span class="kt">int</span> <span class="n">humidity</span> <span class="p">=</span> <span class="m">58</span><span class="p">;</span>
+
+            <span class="c1">// Let's get the value of the variables and write them on the console.</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">humidity</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h1 class="title is-3">How to Name Variables Properly</h1>
+
+<p>To name variables properly:
+    <div class="content">
+        <ul>
+            <li><b>Follow the rules:</b> According to C# docs, a variable name have to start with a letter or underscore (_). C#'s keywords can not be used as variable names. If you don't follow these rules, the compiler will raise errors.</li>
+            <li><b>Choose descriptive names:</b> A good name should describe its content. If you are going to store the temperature of the kitchen, name it <b>temperature</b> or <b>kitchenTemperature</b>. Do not call it kittemp.</li>
+            <li><b>Avoid using abbreviation:</b> If you use an abbreviation that is known to all people, it's OK to use it. Such as HTML, JS, etc. Otherwise, stop using abbreviations. Don't call it ktchtmp. A good rule of thumb is that if you're the only one who uses this abbreviation, avoid using it.</li>
+            <li><b>Try to use language standards:</b> This is optional but I think it's important as well. If you're using C# try to use camelCase. If you're using Python try to use snake_case etc. Check out your language's community to see which one used frequently.</li>
+        </ul>
+    </div>
+</p>
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/how-to-make-comments-in-csharp/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/integral-types-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

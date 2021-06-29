@@ -1,0 +1,250 @@
+[
+    
+      {
+  
+        "title"    : "Let&#39;s Dive into Entity Framework",
+        "subtitle" : "Learn how to store data in a database using Entity Framework.",
+        "main_image_src": "https://www.openlogic.com/sites/openlogic/files/image/2020-07/image-blog-sql-database.jpg",
+        "main_image_caption": "Photo credit - openlogic.com",
+        "url"      : "/entity-framework/",
+        "categories" : "c#databaseEntity Frameworkentityframeworkcode firstdatabase firstmodel firstCRUD",
+        "tags"     : "",
+        "date"     : "2021-06-13 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Methods in C#",
+        "subtitle" : "Learn how to break your program down into smaller pieces.",
+        "main_image_src": "",
+        "main_image_caption": "",
+        "url"      : "/methods-in-csharp/",
+        "categories" : "c#methodfunctionreturnOOPdotdot operatorsubroutineprocedurefunctional",
+        "tags"     : "",
+        "date"     : "2021-02-05 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Arrays in C#",
+        "subtitle" : "Learn how to store collections of objects.",
+        "main_image_src": "",
+        "main_image_caption": "",
+        "url"      : "/arrays-in-csharp/",
+        "categories" : "c#arraydata structurestorecollectionlistforeach",
+        "tags"     : "",
+        "date"     : "2021-02-05 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Looping in C#",
+        "subtitle" : "Learn how to loop.",
+        "main_image_src": "https://cdn.pixabay.com/photo/2017/08/27/17/23/looping-2686892_960_720.jpg",
+        "main_image_caption": "Photo credit - tdahl from pixabay.com",
+        "url"      : "/looping-in-csharp/",
+        "categories" : "c#loopwhiledowhiledo whileforforeachbreak",
+        "tags"     : "",
+        "date"     : "2021-02-04 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Decision making in C#",
+        "subtitle" : "Learn how to make decisions in your program.",
+        "main_image_src": "https://d1sjtleuqoc1be.cloudfront.net/wp-content/uploads/2017/10/23215501/Untitled-design-4-860x574.jpg",
+        "main_image_caption": "Photo credit - translatemedia.com",
+        "url"      : "/decision-making-in-csharp/",
+        "categories" : "c#decisiondecision makingifelseelseifboolconditional operatorrelational operatorternary operatorstatement",
+        "tags"     : "",
+        "date"     : "2021-02-03 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "More Math",
+        "subtitle" : "Some edge cases to discuss.",
+        "main_image_src": "",
+        "main_image_caption": "",
+        "url"      : "/more-math/",
+        "categories" : "c#basic mathnumberadditionsubstractiondivisionmultiplicationoperatoroperandoperationsunarybinarytenary",
+        "tags"     : "",
+        "date"     : "2021-02-02 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Escape Character and String Interpolation in C#",
+        "subtitle" : "Learn how to get data from the user in C#.",
+        "main_image_src": "",
+        "main_image_caption": "",
+        "url"      : "/escape-character-and-string-interpolation-in-csharp/",
+        "categories" : "c#escapeescape characterstringstring interpolation",
+        "tags"     : "",
+        "date"     : "2021-01-31 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Getting User Input in C#",
+        "subtitle" : "Learn how to get data from the user in C#.",
+        "main_image_src": "https://public-media.interaction-design.org/images/ux-daily/56e2cfdabdb9e.jpg",
+        "main_image_caption": "Photo credit - interaction-design.org",
+        "url"      : "/user-input-in-csharp/",
+        "categories" : "c#user inputget datainformation from the useruser",
+        "tags"     : "",
+        "date"     : "2021-01-30 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Basic Math in C#",
+        "subtitle" : "Learn basic math instructions in C#.",
+        "main_image_src": "https://i.ytimg.com/vi/TMubSggUOVE/maxresdefault.jpg",
+        "main_image_caption": "Photo credit - The Organic Chemistry Tutor from Youtube",
+        "url"      : "/basic-math-in-csharp/",
+        "categories" : "c#basic mathnumberadditionsubstractiondivisionmultiplicationoperatoroperandoperationsunarybinarytenary",
+        "tags"     : "",
+        "date"     : "2021-01-29 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "String type in C#",
+        "subtitle" : "Learn how to store strings in C#.",
+        "main_image_src": "https://4.imimg.com/data4/VE/KB/MY-11560202/dsc_0006-500x500.jpg",
+        "main_image_caption": "Photo credit - indiamart.com",
+        "url"      : "/string-in-csharp/",
+        "categories" : "c#data typenon-numberstringcharcharactersequencetextdata structure",
+        "tags"     : "",
+        "date"     : "2021-01-28 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Bool type in C#",
+        "subtitle" : "Learn how to store non-number data in C#.",
+        "main_image_src": "https://www.uckg.org/wp-content/uploads/2018/02/True-False.jpg",
+        "main_image_caption": "Photo credit - uckg.org",
+        "url"      : "/bool-in-csharp/",
+        "categories" : "c#data typenon-numberboolbooleantruefalsetrue or falsedata structuredecisiondecision making",
+        "tags"     : "",
+        "date"     : "2021-01-27 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Floating point types in C#",
+        "subtitle" : "Learn how to store real numbers in C#.",
+        "main_image_src": "https://www.open.edu/openlearn/ocw/pluginfile.php/1313938/mod_oucontent/oucontent/67502/103e4c8b/3485f92c/bltl_m1_s1_4a.png",
+        "main_image_caption": "Photo credit - open.edu",
+        "url"      : "/float-point-types-in-csharp/",
+        "categories" : "c#data typefloatingfloating pointreal numberdecimaldata structure",
+        "tags"     : "",
+        "date"     : "2021-01-26 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Integral types in C#",
+        "subtitle" : "Learn how to store numbers in C#.",
+        "main_image_src": "/assets/images/integral-types.jpg",
+        "main_image_caption": "Photo credit - Black ice on pexels.com",
+        "url"      : "/integral-types-in-csharp/",
+        "categories" : "c#data typeintegralintegerintegral typesinteger typesdata structure",
+        "tags"     : "",
+        "date"     : "2021-01-25 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Variables in C#",
+        "subtitle" : "Learn how to define variables in C#",
+        "main_image_src": "https://blogs.articulate.com/rapid-elearning/wp-content/uploads/sites/7/2016/01/variables.png",
+        "main_image_caption": "Photo credit - articulate.com",
+        "url"      : "/variables-in-csharp/",
+        "categories" : "c#visual studiovariablevariables",
+        "tags"     : "",
+        "date"     : "2021-01-24 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "How to make comments in C#",
+        "subtitle" : "Make your programs clear for all.",
+        "main_image_src": "/assets/images/comments.jpg",
+        "main_image_caption": "Photo credit - Cristian Dina",
+        "url"      : "/how-to-make-comments-in-csharp/",
+        "categories" : "c#visual studiocommentcomments",
+        "tags"     : "",
+        "date"     : "2021-01-23 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "Hello World in C#",
+        "subtitle" : "Write your first C# program.",
+        "main_image_src": "/assets/images/hello-world.jpg",
+        "main_image_caption": "Photo credit - Tyler Lastovich",
+        "url"      : "/hello-world-in-csharp/",
+        "categories" : "c#visual studiohello worldfirst program",
+        "tags"     : "",
+        "date"     : "2021-01-22 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "How to install Visual Studio in 2021 ?",
+        "subtitle" : "Learn how to download and install Visual Studio.",
+        "main_image_src": "https://venturebeat.com/wp-content/uploads/2019/11/visual-studio-logo.jpeg?w=1200&amp;strip=all",
+        "main_image_caption": "Photo credit - venturebeat.com",
+        "url"      : "/how-to-download-visual-studio/",
+        "categories" : "c#.NET.NET Platform.NET Frameworkvisual studio",
+        "tags"     : "",
+        "date"     : "2021-01-20 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "What is .NET Platform?",
+        "subtitle" : "Before diving in C#, let&#39;s learn the platform it runs on.",
+        "main_image_src": "https://docs.microsoft.com/tr-tr/dotnet/standard/library-guidance/media/cross-platform-targeting/platforms-netstandard.png",
+        "main_image_caption": "Photo credit - docs.microsoft.com",
+        "url"      : "/what-is-dotnet-platform/",
+        "categories" : "c#.NET.NET Platform.NET Framework",
+        "tags"     : "",
+        "date"     : "2021-01-20 06:45:13 +0300"
+  
+      } ,
+    
+      {
+  
+        "title"    : "I&#39;ve decided to learn C# in 2021.",
+        "subtitle" : "Learn why I think C# is great to learn in the new year.",
+        "main_image_src": "https://hackernoon.com/drafts/0sva3wtf.png",
+        "main_image_caption": "Photo credit - Hackernoon.com",
+        "url"      : "/i-decided-to-learn-csharp-in-2021/",
+        "categories" : "c#",
+        "tags"     : "",
+        "date"     : "2021-01-20 05:45:13 +0300"
+  
+      } 
+    
+  ]

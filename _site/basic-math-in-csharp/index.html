@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Basic Math in C#</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="https://i.ytimg.com/vi/TMubSggUOVE/maxresdefault.jpg" alt="Some math calculations">
+                        <figcaption><small>Photo credit - The Organic Chemistry Tutor from Youtube</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>Let's talk about the basic math operations in C#. We'll discover addition, substraction, division, multiplication, remainder operator and so on.</b>
+</p>
+<br>
+
+<p>Before we get into details, let me introduce the terms operations and operators.
+    <div class="content">
+        <ul>
+            <li><b>Operation:</b> A calculation that outputs a result. (Example: Addition, Division etc.). An operations consists of two parts.
+                <ul>
+                    <li><b>Operator:</b> The sign that defines the operation. (Example: Minus (-) sign is the operator for substraction operation.)In addition to these operators, C# provides some other operators(binary operators, unary operators, ternary operators etc.) as well.</li>
+                    <li><b>Operand:</b> The the thing that operator works on. (Example: 8-2. 8 and 2 here are the operands.)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</p>
+<br>
+
+<article class="message is-info">
+    <div class="message-body">
+        I have to mention about the <b>assignment operator (=)</b> before we move forward. Equal sign means two things equal to each other in Math. In programming equal sign means the things on the right side calculated and assigned to the thing on the left side.
+    </div>
+</article>
+<br>
+
+<h1 class="title is-3">Addition, Substraction, Division and Multiplication</h1>
+
+<p>Let's do the 4 basic math operations in C#.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Addition</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">8</span> <span class="p">+</span> <span class="m">5</span><span class="p">;</span>
+
+<span class="c1">// Substraction</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="m">19</span> <span class="p">-</span> <span class="m">12</span><span class="p">;</span>
+
+<span class="c1">// Multiplication</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">11</span> <span class="p">*</span> <span class="m">11</span><span class="p">;</span>
+
+<span class="c1">// Division - To have decimal point, operands should be a floating point type.</span>
+<span class="kt">float</span> <span class="n">d</span> <span class="p">=</span> <span class="m">12</span> <span class="p">/</span> <span class="m">2</span><span class="p">;</span>
+
+<span class="c1">// Math operations can be used together.</span>
+<span class="kt">int</span> <span class="n">e</span> <span class="p">=</span> <span class="m">12</span> <span class="p">+</span> <span class="m">25</span> <span class="p">-</span> <span class="m">14</span> <span class="p">-</span> <span class="p">((</span><span class="m">25</span> <span class="p">/</span> <span class="m">5</span><span class="p">)</span> <span class="p">*</span> <span class="m">12</span><span class="p">);</span>
+
+<span class="c1">// Print results on the console</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Result of the addition - a is: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Result of the substraction - b is: {0}"</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Result of the multiplication - c is: {0}"</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Result of the division - d is: {0}"</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Result of operations used together - e is: {0}"</span><span class="p">,</span> <span class="n">e</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Result</span> <span class="n">of</span> <span class="n">the</span> <span class="n">addition</span> <span class="o">-</span> <span class="n">a</span> <span class="n">is</span><span class="o">:</span> <span class="mi">13</span>
+<span class="n">Result</span> <span class="n">of</span> <span class="n">the</span> <span class="n">substraction</span> <span class="o">-</span> <span class="n">b</span> <span class="n">is</span><span class="o">:</span> <span class="mi">7</span>
+<span class="n">Result</span> <span class="n">of</span> <span class="n">the</span> <span class="n">multiplication</span> <span class="o">-</span> <span class="n">c</span> <span class="n">is</span><span class="o">:</span> <span class="mi">121</span>
+<span class="n">Result</span> <span class="n">of</span> <span class="n">the</span> <span class="n">division</span> <span class="o">-</span> <span class="n">d</span> <span class="n">is</span><span class="o">:</span> <span class="mi">6</span>
+<span class="n">Result</span> <span class="n">of</span> <span class="n">operations</span> <span class="n">used</span> <span class="n">together</span> <span class="o">-</span> <span class="n">e</span> <span class="n">is</span><span class="o">:</span> <span class="o">-</span><span class="mi">37</span></code></pre></figure>
+
+<p>If you use math operations together, it's better to have them grouped to define priority. </p>
+<br>
+
+<p>Let's write a small program that calculates the area of a triangle. The formula for calculation the area of a triangle is A = (1/2)*b*h where b is the base of the triangle and h is the height of it.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Area of a triangle.</span>
+<span class="kt">float</span> <span class="n">b</span> <span class="p">=</span> <span class="m">12</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">h</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">area</span> <span class="p">=</span> <span class="p">(</span><span class="n">b</span> <span class="p">*</span> <span class="n">h</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span><span class="p">;</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Area of the given triangle is: "</span> <span class="p">+</span> <span class="n">area</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Area</span> <span class="n">of</span> <span class="n">the</span> <span class="n">given</span> <span class="n">triangle</span> <span class="n">is</span><span class="o">:</span> <span class="mi">30</span></code></pre></figure>
+
+<p>Please check how I print the result on the console. I've used string concatenation to combine string and number together.</p>
+<br>
+
+<h1 class="title is-3">The Remainder Operator</h1>
+
+<p>The remainder operator is a special operator in C# which also known as modulo operator or simply mod. We use it to get the remainder of a division. If we dive 12 by 7, we get 1 as result and 5 as the remainder. C# uses <b>percent sign (%)</b> as the remainder operator. </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">numberOfToys</span> <span class="p">=</span> <span class="m">42</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">numberOfBabies</span> <span class="p">=</span> <span class="m">11</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">remainingToys</span> <span class="p">=</span> <span class="n">numberOfToys</span> <span class="p">%</span> <span class="n">numberOfBabies</span><span class="p">;</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"Number of remaining toys is: {0}"</span><span class="p">,</span> <span class="n">remainingToys</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">Number</span> <span class="n">of</span> <span class="n">remaining</span> <span class="n">toys</span> <span class="n">is</span><span class="o">:</span> <span class="mi">9</span></code></pre></figure>
+
+<p>In the above example code, we have 42 toys to shared between 11 babies. We give each baby the same number of toys which is 3 in this case. We have 9 toys remained. That's an example of where we use the remainder operator.</p>
+<br>
+
+<h1 class="title is-3">Unary Operators</h1>
+
+<p>Unary operators are used to indicate the sign of the number. They only work with one operand and make it positive or negative.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="p">+</span><span class="m">12</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="p">=</span> <span class="p">-</span><span class="m">25</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">c</span> <span class="p">=</span> <span class="m">24</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">d</span> <span class="p">=</span> <span class="p">-</span><span class="n">c</span><span class="p">;</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"a: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"b: {0}"</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"c: {0}"</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"d: {0}"</span><span class="p">,</span> <span class="n">d</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="nl">a:</span> <span class="mi">12</span>
+<span class="n">b</span><span class="o">:</span> <span class="o">-</span><span class="mi">25</span>
+<span class="n">c</span><span class="o">:</span> <span class="mi">24</span>
+<span class="n">d</span><span class="o">:</span> <span class="o">-</span><span class="mi">24</span></code></pre></figure>
+
+<h1 class="title is-3">Compound Operators</h1>
+
+<p>We often get the current value of a variable, modify it and then update the variable with the new value. In order to make these process easier, C# provides us compound operators.</p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">int</span> <span class="n">a</span> <span class="p">=</span> <span class="m">44</span><span class="p">;</span>
+
+<span class="n">a</span> <span class="p">+=</span> <span class="m">5</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"This would make a: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+
+<span class="n">a</span> <span class="p">-=</span> <span class="m">9</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"This would make a: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+
+<span class="n">a</span> <span class="p">/=</span> <span class="m">10</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"This would make a: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+
+<span class="n">a</span> <span class="p">*=</span> <span class="m">2</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"This would make a: {0}"</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">This</span> <span class="n">would</span> <span class="n">make</span> <span class="n">a</span><span class="o">:</span> <span class="mi">49</span>
+<span class="n">This</span> <span class="n">would</span> <span class="n">make</span> <span class="n">a</span><span class="o">:</span> <span class="mi">40</span>
+<span class="n">This</span> <span class="n">would</span> <span class="n">make</span> <span class="n">a</span><span class="o">:</span> <span class="mi">4</span>
+<span class="n">This</span> <span class="n">would</span> <span class="n">make</span> <span class="n">a</span><span class="o">:</span> <span class="mi">8</span></code></pre></figure>
+
+
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/string-in-csharp/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/user-input-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

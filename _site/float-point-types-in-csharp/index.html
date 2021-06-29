@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feynman Technique Rocks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/monokai.css">
+</head>
+
+
+<body style="font-family: 'Roboto', sans-serif;">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="font-size: larger; font-weight: bolder;">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">Feynman Technique Rocks</a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a> 
+        </div>
+        
+        <div id="navbarBurger" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="/search">
+                            <i class="fas fa-search"></i>&nbsp
+                            Search
+                        </a>
+                        <a class="button is-light" href="/about">
+                            <i class="fas fa-address-card"></i>&nbsp
+                            About
+                        </a>
+                        <a class="button is-light" href="/contact">
+                            <i class="fas fa-paper-plane"></i>&nbsp
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <section class="section" style="font-size: larger; line-height: 30px;" >
+    <div class="container">
+        <div class="columns">
+            <div class="column"></div>
+
+            <div class="column is-two-thirds">
+            <h1 class="title is-3">Floating point types in C#</h1>
+
+            
+                <div class="box">
+                    <figure class="image is-text-centered">
+                        <img src="https://www.open.edu/openlearn/ocw/pluginfile.php/1313938/mod_oucontent/oucontent/67502/103e4c8b/3485f92c/bltl_m1_s1_4a.png" alt="Various ways to display real numbers">
+                        <figcaption><small>Photo credit - open.edu</small></figcaption>
+                    </figure>
+                </div>
+                
+
+                <p>In the math world, there are real numbers. Counterparts of real numbers in C# are <b>float, double, </b> and <b>decimal.</b>
+</p>
+<br>
+
+<p>If we didn't have real numbers, we wouldn't be able to store data such as 2.8 .
+</p>
+<br>
+
+<h1 class="title is-3">Double</h1>
+
+<p>Double stores 8 byte of data. It has 15 or 16 digits of precision. Double is the most precise data type. </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a float variable.</span>
+<span class="kt">double</span> <span class="n">myDoubleVariable</span> <span class="p">=</span> <span class="m">12.34546874</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a double can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"myDoubleVariable: {0}"</span><span class="p">,</span> <span class="n">myDoubleVariable</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span> <span class="p">,</span> <span class="kt">double</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min Value: {0}"</span><span class="p">,</span> <span class="kt">double</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="nl">myDoubleVariable:</span> <span class="mi">12</span><span class="p">.</span><span class="mi">34546874</span>
+<span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mf">1.79769313486232E+308</span>
+<span class="n">Min</span> <span class="n">Value</span><span class="o">:</span> <span class="o">-</span><span class="mf">1.79769313486232E+308</span></code></pre></figure>
+
+<h1 class="title is-3">Float</h1>
+
+<p>Float stores 4 byte of data. It has 7 digits of precision. </p>
+<br>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a float variable.</span>
+<span class="kt">float</span> <span class="n">myFloatVariable</span> <span class="p">=</span> <span class="m">12.34546f</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a float can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"myFloatVariable: {0}"</span><span class="p">,</span> <span class="n">myFloatVariable</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span> <span class="p">,</span> <span class="kt">float</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min Value: {0}"</span><span class="p">,</span> <span class="kt">float</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="nl">myFloatVariable:</span> <span class="mi">12</span><span class="p">.</span><span class="mi">34546</span>
+<span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mf">3.402823E+38</span>
+<span class="n">Min</span> <span class="n">Value</span><span class="o">:</span> <span class="o">-</span><span class="mf">3.402823E+38</span></code></pre></figure>
+
+<p>Have you seen the <b>f</b> at the end of variable definition ? When you define a float point variable, you have to put <b>f</b> at the end of the definition.</p>
+<br>
+
+<p>If you don't put the <b>f</b> at the end, the compiler will treat it as double. We specifically have to tell the compiler it is float not double.</p>
+<br>
+
+<h1 class="title is-3">Decimal</h1>
+
+<p>Last data type for floating point types is decimal. This data type was built to make money related calculations but it doesn't have any hardware-level support so it's slow but it doesn't have losing accuracy issue that float and double have. </p>
+<br>
+
+<p>It can store 16 bytes of data and has 28 or 29 digits of precision.</p>
+
+<figure class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">//Let's create a decimal variable.</span>
+<span class="kt">decimal</span> <span class="n">myDecimalVariable</span> <span class="p">=</span> <span class="m">12.345</span><span class="n">m</span><span class="p">;</span>
+
+<span class="c1">//Let's see the maximum and minimum value a decimal can store.</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"myDecimalVariable: {0}"</span><span class="p">,</span> <span class="n">myDecimalVariable</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Max. Value: {0}"</span> <span class="p">,</span> <span class="kt">decimal</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Min Value: {0}"</span><span class="p">,</span> <span class="kt">decimal</span><span class="p">.</span><span class="n">MinValue</span><span class="p">);</span></code></pre></figure>
+
+<p>And output will be:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="nl">myDecimalVariable:</span> <span class="mi">12</span><span class="p">.</span><span class="mi">345</span>
+<span class="n">Max</span><span class="p">.</span> <span class="n">Value</span><span class="o">:</span> <span class="mi">79228162514264337593543950335</span>
+<span class="n">Min</span> <span class="n">Value</span><span class="o">:</span> <span class="o">-</span><span class="mi">79228162514264337593543950335</span></code></pre></figure>
+
+<p>Just like float, we need to put <b>m</b> at the end of variable definition when we define a decimal type variable.</p>
+<br>
+
+<p>If you don't put the <b>f</b> at the end, the compiler will treat it as double. We specifically have to tell the compiler it is decimal not double.</p>
+<br>
+
+<p>Some people say that decimal is not a floating point type but I think it's fine to mention about it under this title.</p>
+<br>
+
+<h1 class="title is-3">Summary Table</h1>
+
+
+<p>Here is the table that gives some information about these integral data types.</p>
+<br>
+
+<div class="columns">
+    <div class="column">
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Byte Size</th>
+                        <th>Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>float</td>
+                        <td>4 byte</td>
+                        <td>-3.402823E+38 to 3.402823E+38</td>
+                        </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 byte</td>
+                        <td>-1.79769313486232E+308 to 1.79769313486232E+308</td>
+                    </tr>
+                    <tr>
+                        <td>decimal</td>
+                        <td>16 byte</td>
+                        <td>-79228162514264337593543950335 to 79228162514264337593543950335</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+                <hr>
+
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+                
+                <a class="pagination-previous" href="/integral-types-in-csharp/"><i class="fas fa-arrow-left"></i>&nbsp;Previous Post</a>
+                
+                
+                <a class="pagination-next" href="/bool-in-csharp/"> Next Post &nbsp;<i class="fas fa-arrow-right"></i></a>
+                
+
+                </nav>
+
+                <br>
+
+                
+                
+                
+
+                <div class="content">
+                    <h5 class="title is-5">You might also like:</h5>
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/entity-framework/">Let's Dive into Entity Framework</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/methods-in-csharp/">Methods in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/arrays-in-csharp/">Arrays in C#</a></h5>
+
+                            
+                            
+                            
+                        
+
+                    
+
+                        
+                        
+
+                        
+
+                        
+
+                            <h5 class="title is-5" ><a href="/looping-in-csharp/">Looping in C#</a></h5>
+
+                            
+                            
+                            
+                                
+                </div>
+
+            </div>
+
+            <div class="column"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+<section class="section">
+    <footer>
+        <hr />
+        <div class="columns is-centered">
+            <div class="column has-text-centered is-4"></div>
+            <div class="column has-text-centered is-4">
+                
+                <a href="mailto:feynmantechniquerocks@gmail.com" class="button is-medium is-envelope" target="blank">
+                    <span class="icon">
+                        <i class="far fa-envelope fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://twitter.com/RocksFeynman" class="button is-medium is-twitter" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                 
+                <a href="https://github.com/feynmantechniquerocks" class="button is-medium is-github" target="blank">
+                    <span class="icon">
+                        <i class="fab fa-github fa-lg"></i>
+                    </span>
+                </a>
+                  
+            </div>
+            <div class="column has-text-centered is-4"></div>
+        </div>
+    </footer>
+</section>
+
+
+    <!-- Fontawesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<!-- Vanilla JS - Navburger for Bulma navbar. -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+            // Add a click event on each of them
+            $navbarBurgers.forEach((el) => {
+                el.addEventListener("click", () => {
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle("is-active");
+                    $target.classList.toggle("is-active");
+                });
+            });
+        }
+    });
+</script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KNRGJDPZM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5KNRGJDPZM");
+</script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
